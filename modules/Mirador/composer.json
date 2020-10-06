@@ -53,7 +53,7 @@
         "name": "dbmdz/mirador-plugins",
         "version": "1.0.6",
         "dist": {
-          "url": "https://github.com/dbmdz/mirador-plugins/archive/master.zip",
+          "url": "https://github.com/dbmdz/mirador-plugins/archive/main.zip",
           "type": "zip"
         }
       }

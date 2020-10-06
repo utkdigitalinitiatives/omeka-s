@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "23ac690ec0b91d48adb99d4150b51663",
+    "content-hash": "045895fc7eb653d1039611572af19d57",
     "packages": [
         {
             "name": "2sc1815j/mirador-dragndrop-link-plugin",
@@ -38,7 +38,7 @@
             "version": "1.0.6",
             "dist": {
                 "type": "zip",
-                "url": "https://github.com/dbmdz/mirador-plugins/archive/master.zip"
+                "url": "https://github.com/dbmdz/mirador-plugins/archive/main.zip"
             },
             "type": "library"
         },
