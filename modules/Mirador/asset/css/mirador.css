@@ -1,0 +1,26 @@
+/* Mirador custom and fixes for common Omeka themes */
+@media screen {
+    #user-bar .show {
+        display: inline-block !important;
+    }
+    .mirador {
+        display: block;
+        width: 90%;
+        height: 600px;
+        margin: 1em 5%;
+        position: relative;
+    }
+    body .mirador-container {
+        font-size: initial;
+        line-height: initial;
+    }
+    .mirador-viewer .manifest-info .window-manifest-title {
+        line-height: initial;
+    }
+    @media (min-width: 1200px) {
+        .modal-dialog {
+            width: 1440px;
+            margin: 30px auto;
+        }
+    }
+}
