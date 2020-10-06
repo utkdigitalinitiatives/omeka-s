@@ -1,6 +1,0 @@
-[submodule "modules/S3FileStore"]
-	path = modules/S3FileStore
-	url = git://github.com/zerocrates/S3FileStore
-[submodule "modules/Mirador"]
-	path = modules/Mirador
-	url = https://github.com/Daniel-KM/Omeka-S-module-Mirador.git
