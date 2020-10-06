@@ -1,0 +1,3 @@
+[submodule "modules/S3FileStore"]
+	path = modules/S3FileStore
+	url = git://github.com/zerocrates/S3FileStore
