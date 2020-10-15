@@ -1,4 +1,19 @@
-# Omeka S
+# Omeka S for the University of Tennessee, Knoxville Libraries
+[![buddy pipeline](https://app.buddy.works/utk-libraries/omeka-s/pipelines/pipeline/283237/badge.svg?token=a08d633e5c643d3691ca9044dffdb440f63f3a962084d29bf363b91177438c2b "buddy pipeline")](https://app.buddy.works/utk-libraries/omeka-s/pipelines/pipeline/283237)
+
+A repository the includes application matching that of managed host entity at tennesee.omeka.net. 
+
+## Notes
+
+- We are currently running [v2.1.2 of Omeka S](https://github.com/omeka/omeka-s/releases/tag/v2.1.2)
+- This repository is for local development only
+- Upon push to master, only the contents `/themes` and `/modules` are deployed (via Buddy) to tennessee.omeka.net
+- Sites under our Omeka S install use the custom `utk-foundation` theme
+- Omeka.net is a managed host, as such we do not control the of Omeka S core
+- We are responsible for module version upkeep and integration testing
+
+
+## Omeka S
 
 Omeka S is a web publication system for universities, galleries, libraries,
 archives, and museums. It consists of a local network of independently curated
