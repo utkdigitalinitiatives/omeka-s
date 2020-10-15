@@ -1,7 +1,7 @@
 # Omeka S for the University of Tennessee, Knoxville Libraries
 [![buddy pipeline](https://app.buddy.works/utk-libraries/omeka-s/pipelines/pipeline/283237/badge.svg?token=a08d633e5c643d3691ca9044dffdb440f63f3a962084d29bf363b91177438c2b "buddy pipeline")](https://app.buddy.works/utk-libraries/omeka-s/pipelines/pipeline/283237)
 
-A repository the includes application matching that of managed host entity at tennesee.omeka.net. 
+A repository that includes the application matching that of the managed host entity at tennesee.omeka.net. 
 
 ## Notes
 
@@ -12,6 +12,9 @@ A repository the includes application matching that of managed host entity at te
 - Omeka.net is a managed host, as such we do not control the of Omeka S core
 - We are responsible for module version upkeep and integration testing
 
+For more information please see extended application documentation at [utkdigitalinitiatives.github.io/omeka-s](https://utkdigitalinitiatives.github.io/omeka-s).
+
+Everything below is boilerplate Omeka S README.md.
 
 ## Omeka S
 
