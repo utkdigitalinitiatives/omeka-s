@@ -1,9 +1,0 @@
-/build
-/language/debug.po
-/language/debug.mo
-/language/chef.po
-/language/chef.mo
-.DS_Store
-.php_cs.cache
-composer.phar
-debug.log

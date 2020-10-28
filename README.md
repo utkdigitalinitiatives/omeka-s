@@ -1,21 +1,4 @@
-# Omeka S for the University of Tennessee, Knoxville Libraries
-[![buddy pipeline](https://app.buddy.works/utk-libraries/omeka-s/pipelines/pipeline/283237/badge.svg?token=a08d633e5c643d3691ca9044dffdb440f63f3a962084d29bf363b91177438c2b "buddy pipeline")](https://app.buddy.works/utk-libraries/omeka-s/pipelines/pipeline/283237)
-
-A repository that includes the application matching that of the managed host entity at tennesee.omeka.net. For more information, please review ourgit a [extended application documentation](https://utkdigitalinitiatives.github.io/omeka-s/).
-
-
-## Notes
-
-- We are currently running [v2.1.2 of Omeka S](https://github.com/omeka/omeka-s/releases/tag/v2.1.2)
-- This repository is for local development only
-- Upon push to master, only the contents `/themes` and `/modules` are deployed (via Buddy) to tennessee.omeka.net
-- Sites under our Omeka S install use the custom `utk-foundation` theme
-- Omeka.net is a managed host, as such we do not control the of Omeka S core
-- We are responsible for module version upkeep and integration testing
-
-**Everything below is boilerplate Omeka S README.md.** :ok_person: 
-
-## Omeka S
+# Omeka S
 
 Omeka S is a web publication system for universities, galleries, libraries,
 archives, and museums. It consists of a local network of independently curated
@@ -45,8 +28,7 @@ options in the [documentation](https://omeka.org/s/docs/user-manual/configuratio
    * `$ cd omeka-s`
 1. Perform first-time setup:
    * `$ npm install`
-   * `$ npm install --global gulp-cli` (if you do not already have `gulp` installed)
-   * `$ gulp init`
+   * `$ npx gulp init`
 1. Open `config/database.ini` and add your MySQL username, password, database
    name, and host name. The user and database must be created before this step.
 1. Make sure the `files/` directory is writable by Apache.
@@ -104,3 +86,5 @@ Omeka uses the following libraries, among others:
 
 Omeka development adheres to the [Zend Framework 2 Coding Standards](https://zf2-docs.readthedocs.org/en/latest/ref/coding.standard.html)
 and uses the [git-flow](http://nvie.com/posts/a-successful-git-branching-model/) branching model.
+
+© 2013-2016 [Roy Rosenzweig Center for History and New Media](http://chnm.gmu.edu/), 2016-present [Corporation for Digital Scholarship](http://digitalscholar.org/)
