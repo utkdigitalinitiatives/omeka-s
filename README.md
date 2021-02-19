@@ -6,12 +6,12 @@ A repository that includes the application matching that of the managed host ent
 
 ## Notes
 
-- We are currently running [v3.0.1 of Omeka S](https://github.com/omeka/omeka-s/releases/tag/v3.0.1)
-- This repository is for local development only
-- Upon push to master, only the contents `/themes` and `/modules` are deployed (via Buddy) to tennessee.omeka.net
-- Sites under our Omeka S install use the custom `utk-foundation` theme
-- Omeka.net is a managed host, as such we do not control the of Omeka S core
-- We are responsible for module version upkeep and integration testing
+- :package: We are currently running [v3.0.1 of Omeka S](https://github.com/omeka/omeka-s/releases/tag/v3.0.1)
+- :building_construction: This repository is for local development only
+- :rocket: Upon push to master, only the contents `/themes` and `/modules` are deployed (via Buddy) to tennessee.omeka.net
+- :art: Sites under our Omeka S install use the custom `utk-exhibits` theme, titled *UT Libraries*
+- :globe_with_meridians: Omeka.net is a managed host, as such we do not control the of Omeka S core
+- :white_check_mark: We are responsible for module version upkeep and integration testing
 
 **Everything below is boilerplate Omeka S README.md.** :ok_person: 
 
