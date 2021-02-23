@@ -18,63 +18,43 @@ $userBar = $this->userBar();
 ?>
 <?php echo $this->doctype(); ?>
 <?php echo $this->htmlElement('html'); ?>
-    <head>
-        <?php echo $this->headMeta(); ?>
-        <?php echo $this->headTitle(); ?>
-        <?php echo $this->headLink(); ?>
-        <?php echo $this->headStyle(); ?>
-        <?php echo $this->headScript(); ?>
-        
-        <style>
-            <?php if ($accentColor = $this->themeSetting('accent_color')): ?>
-            a:link,
-            a:visited {
-                color: <?php echo $accentColor; ?>
-            }
-            
-            a:active,
-            a:hover {
-                color: <?php echo $accentColor; ?>;
-                opacity: .75;
-            }
-            <?php endif; ?>
-        </style>
-    </head>
-
-    <?php echo $this->htmlElement('body'); ?>
-        <a id="skipnav" href="#content"><?php echo $this->translate('Skip to main content'); ?></a>
-        <?php echo $userBar; ?>
-        <header>
-            <h1>
-                <a href="<?php echo $site->url(); ?>" class="site-title">
-                <?php if ($this->themeSetting('logo')): ?>
-                    <img src="<?php echo $this->themeSettingAssetUrl('logo'); ?>" alt="<?php echo $escape($siteTitle); ?>" />
-                <?php else: ?>
-                    <?php echo $escape($siteTitle); ?>
-                <?php endif; ?>
-                </a>
-            </h1>
-            <div id="search">
-                <?php echo $this->partial('common/search-form'); ?>
-            </div>
-
-            <nav>
+<head>
+    <?php echo $this->headMeta(); ?>
+    <?php echo $this->headTitle(); ?>
+    <?php echo $this->headLink(); ?>
+    <?php echo $this->headStyle(); ?>
+    <?php echo $this->headScript(); ?>
+    <?php if ($subtheme = $this->themeSetting('utk_subtheme')): ?>
+        <?php // append  subtheme ?>
+    <?php endif; ?>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script async src="https://www.lib.utk.edu/assets/universal-header.js?v=1.0.3"></script>
+</head>
+<?php echo $this->htmlElement('body'); ?>
+    <div id="utk-lib-header" data-page-title="Digital Exhibits - <?php echo $escape($siteTitle); ?> | Libraries at University of Tennessee, Knoxville"
+    ></div>
+    <header class="container">
+        append <?php print $subtheme; ?> subtheme
+        <div id="search">
+            <?php echo $this->partial('common/search-form'); ?>
+        </div>
+        <nav>
             <?php
             echo $site->publicNav()->menu()->renderMenu(null, [
                 'maxDepth' => $this->themeSetting('nav_depth') - 1
             ]);
             ?>
-            </nav>
-        </header>
-        <div id="content" role="main">
-            <?php echo $this->content; ?>
-        </div>
-        <footer>
-            <?php if ($footerContent = $this->themeSetting('footer')): ?>
+        </nav>
+    </header>
+    <main id="content" role="main" class="container">
+        <?php echo $this->content; ?>
+    </main>
+    <div  class="container">
+        <?php if ($footerContent = $this->themeSetting('utk_footer')): ?>
             <?php echo $footerContent; ?>
-            <?php else: ?>
-                <?php echo $this->translate('Powered by Omeka S'); ?>
-            <?php endif; ?>
-        </footer>
-    </body>
+        <?php endif; ?>
+    </div>
+<footer id="utk-lib-footer"></footer>
+</body>
 </html>
