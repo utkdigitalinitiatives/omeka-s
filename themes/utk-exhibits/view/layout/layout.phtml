@@ -57,7 +57,7 @@ endif;
                     <?php
 
                         // clean this up and convert to a controller
-                        $response = file_get_contents("http://omeka-s.test/api/sites");
+                        $response = file_get_contents("https://tennessee.omeka.net/api/sites");
                         $sites = json_decode($response);
                         $instance = array();
 
