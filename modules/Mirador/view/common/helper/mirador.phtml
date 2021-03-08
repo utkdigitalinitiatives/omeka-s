@@ -1,0 +1,17 @@
+<?php
+/**
+ * @var \Laminas\View\Renderer\PhpRenderer $this
+ * @var string $config
+ * @var string $viewerId The viewer id should be the same than "id" inside config.
+ *
+ * @link https://github.com/ProjectMirador/mirador/wiki/Configuration-Guides
+ */
+
+$script = <<<JS
+var miradorConfig = $config;
+window.globalMiradorPlugins = miradorConfig.globalMiradorPlugins;
+JS;
+$this->headScript()->appendScript($script);
+?>
+
+<div id="<?= $viewerId ?>" class="mirador viewer"></div>
