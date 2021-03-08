@@ -70,5 +70,43 @@
         }
       }
     }
+
+    .exhibit-toggle {
+      color: $gray-1;
+      display: flex;
+      background-color: $smokey;
+      transition: $transition-all-fast;
+      padding: 0 $golden-ratio-2;
+
+      &:hover {
+        background-color: $smokeyx;
+      }
+
+      label {
+        font-size: $type-0;
+        display: flex;
+        height: 47px;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        margin-right: $golden-ratio-1;
+      }
+
+      select,
+      option {
+        padding: 0;
+        height: 47px;
+        font-size: $type-2;
+        background: transparent;
+        border: none;
+        font-family: $sans;
+        color: $white;
+        font-weight: 700;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        cursor: pointer;
+        appearance: none;       /* Remove default arrow */
+      }
+    }
   }
 }

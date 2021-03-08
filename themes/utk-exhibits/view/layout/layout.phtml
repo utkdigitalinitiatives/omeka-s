@@ -2,6 +2,7 @@
 $escape = $this->plugin('escapeHtml');
 $siteTitle = $site->title();
 $siteSummary = $site->summary();
+$siteId = $site->id();
 $this->htmlElement('html')->setAttribute('lang', $this->lang());
 $this->headMeta()->setCharset('utf-8');
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1');
@@ -52,9 +53,38 @@ endif;
                     ]);
                     ?>
                 </nav>
-<!--                <div id="search">-->
-<!--                    --><?php //echo $this->partial('common/search-form'); ?>
-<!--                </div>-->
+                <div class="exhibit-toggle">
+                    <?php
+
+                        // clean this up and convert to a controller
+                        $response = file_get_contents("http://omeka-s.test/api/sites");
+                        $sites = json_decode($response);
+                        $instance = array();
+
+                        foreach ($sites as $key => $site) :
+                            if ($site->{"o:is_public"} === true) :
+                                $instance[$key]['id'] = $site->{"o:id"};
+                                $instance[$key]['slug'] = $site->{"o:slug"};
+                                $instance[$key]['title'] = $site->{"o:title"};
+
+                                if ($site->{"o:id"} === $siteId) :
+                                    $instance[$key]['selected'] = ' selected="selected"';
+                                else:
+                                    $instance[$key]['selected'] = null;
+                                endif;
+                            endif;
+                        endforeach;
+
+                    ?>
+                    <label for="exhibit-toggle" class="sr-only">Select Exhibit</label>
+                    <select id="exhibit-toggle" name="exhibit-toggle">
+                        <?php
+                            foreach ($instance as $site) :
+                                echo "<option value='/s/". $site['slug'] ."' id=". $site['id'] . $site['selected'] . ">" . $site['title'] . "</option>";
+                            endforeach;
+                        ?>
+                    </select>
+                </div>
             </div>
             <div class="exhibit-title">
                 <h2>

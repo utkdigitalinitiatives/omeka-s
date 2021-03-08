@@ -84,3 +84,34 @@ body .utk-notice {
         .exhibit > header .exhibit-navbar ul li a:hover,
         .exhibit > header .exhibit-navbar ul li a:focus {
           color: #fff; }
+  .exhibit > header .exhibit-toggle {
+    color: #e0e0e0;
+    display: flex;
+    background-color: #58595b;
+    transition: all 110ms ease-in-out;
+    padding: 0 18px; }
+    .exhibit > header .exhibit-toggle:hover {
+      background-color: #333; }
+    .exhibit > header .exhibit-toggle label {
+      font-size: 0.6111rem;
+      display: flex;
+      height: 47px;
+      justify-content: center;
+      align-self: center;
+      align-items: center;
+      margin-right: 11px; }
+    .exhibit > header .exhibit-toggle select,
+    .exhibit > header .exhibit-toggle option {
+      padding: 0;
+      height: 47px;
+      font-size: 0.8333rem;
+      background: transparent;
+      border: none;
+      font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #fff;
+      font-weight: 700;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      cursor: pointer;
+      appearance: none;
+      /* Remove default arrow */ }

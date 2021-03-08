@@ -57,5 +57,11 @@ var Omeka = {};
         // Maintain iframe aspect ratios
         $(window).on('load resize', framerateCallback(fixIframeAspect));
         fixIframeAspect();
+
+        $( "#exhibit-toggle" ).change(function() {
+            window.location = $(this).val();
+            console.log($(this).val());
+        });
+
     });
 })(jQuery);
