@@ -1,1 +1,7 @@
-@import "normalize";
+// global
+@import "global/normalize";
+@import "global/variables";
+
+// layout
+@import "layout/body";
+@import "layout/header";

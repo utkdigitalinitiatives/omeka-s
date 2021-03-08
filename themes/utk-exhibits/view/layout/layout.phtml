@@ -1,6 +1,7 @@
 <?php
 $escape = $this->plugin('escapeHtml');
 $siteTitle = $site->title();
+$siteSummary = $site->summary();
 $this->htmlElement('html')->setAttribute('lang', $this->lang());
 $this->headMeta()->setCharset('utf-8');
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1');
@@ -15,6 +16,14 @@ $this->headScript()->prependFile($this->assetUrl('vendor/jquery/jquery.min.js', 
 $this->jsTranslate();
 $this->trigger('view.layout');
 $userBar = $this->userBar();
+
+if ($this->themeSetting('utk_background')):
+    $source = $this->themeSettingAssetUrl('utk_background');
+    $backgroundStyle = 'style="background-image: url(' . $source . ');"';
+else :
+    $backgroundStyle = null;
+endif;
+
 ?>
 <?php echo $this->doctype(); ?>
 <?php echo $this->htmlElement('html'); ?>
@@ -32,28 +41,38 @@ $userBar = $this->userBar();
     <script async src="https://www.lib.utk.edu/assets/universal-header.js?v=1.0.3"></script>
 </head>
 <?php echo $this->htmlElement('body'); ?>
-    <div id="utk-lib-header" data-page-title="Digital Exhibits - <?php echo $escape($siteTitle); ?> | Libraries at University of Tennessee, Knoxville"
-    ></div>
-    <header class="container">
-        append <?php print $subtheme; ?> subtheme
-        <div id="search">
-            <?php echo $this->partial('common/search-form'); ?>
+    <div id="utk-lib-header" data-page-title="Digital Exhibits - <?php echo $escape($siteTitle); ?> | Libraries at University of Tennessee, Knoxville"></div>
+    <div class="exhibit"  <?php echo $backgroundStyle; ?>>
+        <header class="exhibit-masthead">
+            <div class="exhibit-navbar container">
+                <nav>
+                    <?php
+                    echo $site->publicNav()->menu()->renderMenu(null, [
+                        'maxDepth' => $this->themeSetting('nav_depth') - 1
+                    ]);
+                    ?>
+                </nav>
+<!--                <div id="search">-->
+<!--                    --><?php //echo $this->partial('common/search-form'); ?>
+<!--                </div>-->
+            </div>
+            <div class="exhibit-title">
+                <h2>
+                    <?php echo $escape($siteTitle); ?>
+                </h2>
+                <span class="exhibit-summary">
+                    <?php echo $escape($siteSummary); ?>
+                </span>
+            </div>
+        </header>
+        <main id="content" role="main" class="container">
+            <?php echo $this->content; ?>
+        </main>
+        <div  class="container">
+            <?php if ($footerContent = $this->themeSetting('utk_footer')): ?>
+                <?php echo $footerContent; ?>
+            <?php endif; ?>
         </div>
-        <nav>
-            <?php
-            echo $site->publicNav()->menu()->renderMenu(null, [
-                'maxDepth' => $this->themeSetting('nav_depth') - 1
-            ]);
-            ?>
-        </nav>
-    </header>
-    <main id="content" role="main" class="container">
-        <?php echo $this->content; ?>
-    </main>
-    <div  class="container">
-        <?php if ($footerContent = $this->themeSetting('utk_footer')): ?>
-            <?php echo $footerContent; ?>
-        <?php endif; ?>
     </div>
 <footer id="utk-lib-footer"></footer>
 </body>
