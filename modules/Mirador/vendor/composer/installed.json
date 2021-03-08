@@ -1,0 +1,217 @@
+{
+    "packages": [
+        {
+            "name": "2sc1815j/mirador-dragndrop-link-plugin",
+            "version": "0.0.1",
+            "version_normalized": "0.0.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/2SC1815J/mirador-dragndrop-link-plugin/archive/master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../2sc1815j/mirador-dragndrop-link-plugin"
+        },
+        {
+            "name": "archivelabs/mirador-crosslink-plugin",
+            "version": "0.0.1",
+            "version_normalized": "0.0.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/ArchiveLabs/mirador-crosslink-plugin/archive/master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../archivelabs/mirador-crosslink-plugin"
+        },
+        {
+            "name": "daniel-km/mirador-plugin-metadata-tab",
+            "version": "1.0.0",
+            "version_normalized": "1.0.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/Daniel-KM/Mirador-plugin-MetadataTab/archive/master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../daniel-km/mirador-plugin-metadata-tab"
+        },
+        {
+            "name": "dbmdz/mirador-plugins",
+            "version": "1.0.6.1",
+            "version_normalized": "1.0.6.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/dbmdz/mirador-plugins/archive/main.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../dbmdz/mirador-plugins"
+        },
+        {
+            "name": "jazahn/mirador-metadata",
+            "version": "0.0.1",
+            "version_normalized": "0.0.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jazahn/mirador-metadata/archive/master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../jazahn/mirador-metadata"
+        },
+        {
+            "name": "jbhoward-dublin/mirador-plugins-ucd",
+            "version": "0.0.1",
+            "version_normalized": "0.0.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jbhoward-dublin/mirador-plugins-ucd/archive/master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../jbhoward-dublin/mirador-plugins-ucd"
+        },
+        {
+            "name": "jeffreycwitt/mirador-ldn-plugin",
+            "version": "0.0.1",
+            "version_normalized": "0.0.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jeffreycwitt/mirador-ldn-plugin/archive/master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../jeffreycwitt/mirador-ldn-plugin"
+        },
+        {
+            "name": "mirador/mirador",
+            "version": "2.7.0",
+            "version_normalized": "2.7.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/ProjectMirador/mirador/releases/download/v2.7.0/build.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../mirador/mirador"
+        },
+        {
+            "name": "slowprog/composer-copy-file",
+            "version": "0.3.3",
+            "version_normalized": "0.3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/slowprog/CopyFile.git",
+                "reference": "b02d55f7587577f29d355f0ce7b697f66dffc0af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/slowprog/CopyFile/zipball/b02d55f7587577f29d355f0ce7b697f66dffc0af",
+                "reference": "b02d55f7587577f29d355f0ce7b697f66dffc0af",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "mikey179/vfsstream": "~1",
+                "php-mock/php-mock-phpunit": "~1",
+                "phpunit/phpunit": "5.7.27",
+                "symfony/filesystem": "~2.7",
+                "symfony/finder": "~2.7"
+            },
+            "time": "2020-07-02T14:44:41+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "SlowProg\\CopyFile\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Tyshev",
+                    "email": "slowprog@gmail.com"
+                }
+            ],
+            "description": "Composer script copying your files after install",
+            "homepage": "https://github.com/SlowProg/composer-copy-file",
+            "keywords": [
+                "copy file"
+            ],
+            "support": {
+                "issues": "https://github.com/slowprog/CopyFile/issues",
+                "source": "https://github.com/slowprog/CopyFile/tree/0.3.3"
+            },
+            "install-path": "../slowprog/composer-copy-file"
+        },
+        {
+            "name": "sul-dlss/mirador-jump-to-page",
+            "version": "0.0.1",
+            "version_normalized": "0.0.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/sul-dlss/mirador-jump-to-page/archive/master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../sul-dlss/mirador-jump-to-page"
+        },
+        {
+            "name": "ucla-library/mirador-disable-zoom",
+            "version": "0.1.0",
+            "version_normalized": "0.1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/UCLALibrary/mirador-disable-zoom/archive/master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../ucla-library/mirador-disable-zoom"
+        },
+        {
+            "name": "ucla-library/mirador-ruler",
+            "version": "0.1.0",
+            "version_normalized": "0.1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/UCLALibrary/mirador-ruler/archive/master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../ucla-library/mirador-ruler"
+        },
+        {
+            "name": "ucla-library/mirador-share-workspace",
+            "version": "0.1.0",
+            "version_normalized": "0.1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/UCLALibrary/mirador-share-workspace/archive/master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../ucla-library/mirador-share-workspace"
+        },
+        {
+            "name": "ucla-library/mirador-sync-windows",
+            "version": "0.1.0",
+            "version_normalized": "0.1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/UCLALibrary/mirador-sync-windows/archive/master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../ucla-library/mirador-sync-windows"
+        }
+    ],
+    "dev": false,
+    "dev-package-names": []
+}
