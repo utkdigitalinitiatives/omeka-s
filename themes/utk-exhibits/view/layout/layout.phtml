@@ -45,15 +45,10 @@ endif;
     <div id="utk-lib-header" data-page-title="Digital Exhibits - <?php echo $escape($siteTitle); ?> | Libraries at University of Tennessee, Knoxville"></div>
     <div class="exhibit"  <?php echo $backgroundStyle; ?>>
         <header class="exhibit-masthead">
-            <div class="exhibit-navbar container">
-                <nav>
-                    <?php
-                    echo $site->publicNav()->menu()->renderMenu(null, [
-                        'maxDepth' => $this->themeSetting('nav_depth') - 1
-                    ]);
-                    ?>
-                </nav>
-                <div class="exhibit-toggle">
+            <div class="exhibit-navbar">
+                <div class="exhibit-navbar--inner container">
+                    <span class="exhibit-domain">Digital Exhibits</span>
+                    <div class="exhibit-toggle">
                     <?php
 
                         // clean this up and convert to a controller
@@ -84,6 +79,7 @@ endif;
                             endforeach;
                         ?>
                     </select>
+                </div>
                 </div>
             </div>
             <div class="exhibit-title">

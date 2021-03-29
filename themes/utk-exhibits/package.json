@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:dev": "webpack",
-    "build:production": "cross-env NODE_ENV=production webpack",
-    "watch": "webpack --watch"
+    "dev": "webpack",
+    "build": "cross-env NODE_ENV=production webpack",
+    "start": "webpack --watch"
   },
   "author": "Mat Jordan",
   "license": "MIT",
