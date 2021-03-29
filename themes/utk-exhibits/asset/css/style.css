@@ -54,19 +54,19 @@ body .utk-notice {
       text-transform: uppercase;
       letter-spacing: .047em; }
   .exhibit > header .exhibit-navbar {
-    background-color: #333;
+    background-color: white;
     height: 47px;
-    max-height: 47px; }
+    max-height: 47px;
+    box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15); }
     .exhibit > header .exhibit-navbar .exhibit-domain {
       height: 47px;
-      color: #fff;
+      color: #58595b;
       display: flex;
       flex-direction: column;
       justify-content: center;
       margin-right: 18px;
       font-size: 0.8333rem;
-      padding-top: 2px;
-      font-weight: 700; }
+      padding-top: 2px; }
     .exhibit > header .exhibit-navbar--inner {
       display: flex; }
     .exhibit > header .exhibit-navbar ul {
@@ -96,14 +96,47 @@ body .utk-notice {
   .exhibit > header .exhibit-toggle {
     color: #e0e0e0;
     display: flex;
-    transition: all 110ms ease-in-out;
     font-size: 1rem !important;
-    border: 2px solid #4d4d4d;
     height: 33px;
     margin-top: 7px;
-    border-radius: 6px; }
+    background-color: transparent;
+    border: 1px solid #e0e0e0;
+    transition: all 110ms ease-in-out;
+    box-shadow: none;
+    position: relative;
+    background-color: #fff; }
+    .exhibit > header .exhibit-toggle::after {
+      position: absolute;
+      z-index: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 3px;
+      content: '';
+      display: block;
+      right: 11px;
+      top: calc(50% - 3px);
+      content: "\E805";
+      color: #a7a9ac;
+      font-family: fontello;
+      font-style: normal;
+      speak: none;
+      text-decoration: inherit;
+      text-align: center;
+      font-variant: normal;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      margin-left: 6px;
+      font-size: 11px;
+      display: inline-flex;
+      align-content: center;
+      align-items: center;
+      margin-top: -2px;
+      text-decoration: none !important; }
     .exhibit > header .exhibit-toggle:hover {
-      background-color: #1a1a1a; }
+      border-color: #cacaca;
+      box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15); }
+      .exhibit > header .exhibit-toggle:hover::after {
+        color: #006c93; }
     .exhibit > header .exhibit-toggle label {
       font-size: 0.6111rem;
       display: flex;
@@ -115,13 +148,14 @@ body .utk-notice {
     .exhibit > header .exhibit-toggle select,
     .exhibit > header .exhibit-toggle option {
       padding: 0;
-      height: 31px;
-      line-height: 31px;
+      height: 33px;
+      line-height: 33px;
       font-size: 0.8333rem;
       background: transparent;
       border: none;
+      color: #333;
+      -webkit-font-smoothing: antialiased;
       font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #fff;
       font-weight: 400;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -129,4 +163,6 @@ body .utk-notice {
       appearance: none;
       /* Remove default arrow */ }
     .exhibit > header .exhibit-toggle select {
-      padding: 0 6px !important; }
+      padding-left: 6px !important;
+      padding-right: 29px !important;
+      z-index: 1; }
