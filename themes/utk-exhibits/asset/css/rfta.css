@@ -32,3 +32,9 @@
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 body {
   background-color: #333; }
+
+.exhibit {
+  background-position: 50% -150px;
+  background-size: cover; }
+  .exhibit .exhibit-title {
+    text-shadow: 2px 5px 5px rgba(255, 255, 255, 0.25); }

@@ -6,26 +6,6 @@
   min-height: 1000px;
 
   > header {
-    .exhibit-title {
-      text-align: center;
-      padding: $golden-ratio-4 0 $golden-ratio-5;
-      text-shadow: 5px 5px 8px rgba($white, 0.25);
-
-      h2 {
-        font-size: $type-5;
-        font-weight: 700;
-        margin-bottom: 0.35em;
-        letter-spacing: -.047em;
-      }
-
-      span.exhibit-summary {
-        display: block;
-        font-size: $type-2;
-        text-transform: uppercase;
-        letter-spacing: .047em;
-      }
-    }
-
     .exhibit-navbar {
       background-color: rgba($white, 0.92);
       height: $golden-ratio-4;

@@ -1,3 +1,26 @@
 body .utk-notice {
   display: none;
 }
+
+.exhibit {
+  .exhibit-title {
+    padding: $golden-ratio-3 0 $golden-ratio-4;
+
+    h2 {
+      font-size: $type-6;
+      font-weight: 700;
+      margin-bottom: 0.29em;
+      letter-spacing: -0.047em;
+      line-height: 1.11em;
+    }
+
+    span.exhibit-summary {
+      display: block;
+      font-size: $type-3;
+      color: $smokeyx;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      line-height: 1.35em;
+    }
+  }
+}

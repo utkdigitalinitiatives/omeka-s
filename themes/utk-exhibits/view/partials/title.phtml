@@ -1,0 +1,13 @@
+<?php
+$escape = $this->plugin('escapeHtml');
+$siteTitle = $site->title();
+$siteSummary = $site->summary();
+?>
+<div class="exhibit-title">
+    <h2>
+        <?php echo $escape($siteTitle); ?>
+    </h2>
+    <span class="exhibit-summary">
+        <?php echo $escape($siteSummary); ?>
+    </span>
+</div>

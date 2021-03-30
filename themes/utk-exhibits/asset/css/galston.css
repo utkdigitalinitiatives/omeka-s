@@ -31,4 +31,26 @@
  */
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 body {
-  background-color: #705550; }
+  background-color: #f0ede3; }
+
+.exhibit {
+  background-position: 100% -47px;
+  background-size: contain; }
+  .exhibit .exhibit-title h2 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-size: 2.6111rem;
+    font-weight: 400;
+    color: #705550; }
+  .exhibit .exhibit-title span.exhibit-summary {
+    color: #333;
+    font-size: 1rem; }
+
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: 400;
+  color: #705550; }

@@ -1,0 +1,49 @@
+<?php
+$escape = $this->plugin('escapeHtml');
+$siteId = $site->id();
+?>
+<header class="exhibit-masthead">
+    <div class="exhibit-navbar">
+        <div class="exhibit-navbar--inner container">
+            <span class="exhibit-domain">Digital Exhibits</span>
+            <div class="exhibit-toggle">
+                <?php
+
+                if (isset($_SERVER['HTTPS'])) :
+                    $protocol = "https://";
+                else :
+                    $protocol = "http://";
+                endif;
+
+                // clean this up and convert to a controller
+                $response = file_get_contents($protocol . $_SERVER["HTTP_HOST"] . "/api/sites");
+                $sites = json_decode($response);
+                $instance = array();
+
+                foreach ($sites as $key => $site) :
+                    if ($site->{"o:is_public"} === true) :
+                        $instance[$key]['id'] = $site->{"o:id"};
+                        $instance[$key]['slug'] = $site->{"o:slug"};
+                        $instance[$key]['title'] = $site->{"o:title"};
+
+                        if ($site->{"o:id"} === $siteId) :
+                            $instance[$key]['selected'] = ' selected="selected"';
+                        else:
+                            $instance[$key]['selected'] = null;
+                        endif;
+                    endif;
+                endforeach;
+
+                ?>
+                <label for="exhibit-toggle" class="sr-only">Select Exhibit</label>
+                <select id="exhibit-toggle" name="exhibit-toggle">
+                    <?php
+                    foreach ($instance as $site) :
+                        echo "<option value='/s/". $site['slug'] ."' id=". $site['id'] . $site['selected'] . ">" . $site['title'] . "</option>";
+                    endforeach;
+                    ?>
+                </select>
+            </div>
+        </div>
+    </div>
+</header>

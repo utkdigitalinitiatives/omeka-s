@@ -33,26 +33,28 @@
 body .utk-notice {
   display: none; }
 
+.exhibit .exhibit-title {
+  padding: 29px 0 47px; }
+  .exhibit .exhibit-title h2 {
+    font-size: 2.2166rem;
+    font-weight: 700;
+    margin-bottom: 0.29em;
+    letter-spacing: -0.047em;
+    line-height: 1.11em; }
+  .exhibit .exhibit-title span.exhibit-summary {
+    display: block;
+    font-size: 1rem;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.35em; }
+
 .exhibit {
   font-family: "Gotham SSm 2r", "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: 100%;
   min-height: 1000px; }
-  .exhibit > header .exhibit-title {
-    text-align: center;
-    padding: 47px 0 76px;
-    text-shadow: 5px 5px 8px rgba(255, 255, 255, 0.25); }
-    .exhibit > header .exhibit-title h2 {
-      font-size: 1.6111rem;
-      font-weight: 700;
-      margin-bottom: 0.35em;
-      letter-spacing: -.047em; }
-    .exhibit > header .exhibit-title span.exhibit-summary {
-      display: block;
-      font-size: 0.8333rem;
-      text-transform: uppercase;
-      letter-spacing: .047em; }
   .exhibit > header .exhibit-navbar {
     background-color: rgba(255, 255, 255, 0.92);
     height: 47px;

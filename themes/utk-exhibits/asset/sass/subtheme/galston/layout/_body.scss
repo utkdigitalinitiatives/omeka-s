@@ -1,3 +1,35 @@
 body {
-  background-color: $buckskin;
+  background-color: $exhibitBackground;
+}
+
+.exhibit {
+  background-position: 100% -47px;
+  background-size: contain;
+
+  .exhibit-title {
+    h2 {
+      font-family: $serif;
+      font-size: $type-7;
+      font-weight: 400;
+      color: $exhibitHeading;
+    }
+
+    span.exhibit-summary {
+      color: $exhibitText;
+      font-size: $type-3;
+    }
+  }
+}
+
+main {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $serif;
+    font-weight: 400;
+    color: $buckskin;
+  }
 }
