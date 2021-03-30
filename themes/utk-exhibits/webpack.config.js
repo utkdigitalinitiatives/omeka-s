@@ -2,7 +2,10 @@ const path = require('path');
 
 module.exports = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
-    entry: ['./asset/sass/style.scss'],
+    entry: [
+        './asset/sass/style.scss',
+        './asset/sass/subtheme/galston/galston.scss'
+    ],
     output: {
         path: path.resolve(__dirname, 'asset'),
         filename: 'js/build.js',

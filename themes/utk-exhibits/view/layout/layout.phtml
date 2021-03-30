@@ -18,6 +18,13 @@ $this->jsTranslate();
 $this->trigger('view.layout');
 $userBar = $this->userBar();
 
+if ($subtheme = $this->themeSetting('utk_subtheme')):
+    if ($subtheme !== 'default') :
+        $cssPath = 'css/' . $subtheme . '.css';
+        $this->headLink()->appendStylesheet($this->assetUrl($cssPath));
+    endif;
+endif;
+
 if ($this->themeSetting('utk_background')):
     $source = $this->themeSettingAssetUrl('utk_background');
     $backgroundStyle = 'style="background-image: url(' . $source . ');"';
@@ -29,14 +36,15 @@ endif;
 <?php echo $this->doctype(); ?>
 <?php echo $this->htmlElement('html'); ?>
 <head>
-    <?php echo $this->headMeta(); ?>
-    <?php echo $this->headTitle(); ?>
-    <?php echo $this->headLink(); ?>
-    <?php echo $this->headStyle(); ?>
-    <?php echo $this->headScript(); ?>
-    <?php if ($subtheme = $this->themeSetting('utk_subtheme')): ?>
-        <?php // append  subtheme ?>
-    <?php endif; ?>
+    <?php
+
+        echo $this->headMeta();
+        echo $this->headTitle();
+        echo $this->headLink();
+        echo $this->headStyle();
+        echo $this->headScript();
+
+    ?>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
     <script async src="https://www.lib.utk.edu/assets/universal-header.js?v=1.0.3"></script>
@@ -50,7 +58,7 @@ endif;
                     <span class="exhibit-domain">Digital Exhibits</span>
                     <div class="exhibit-toggle">
                     <?php
-                    
+
                         if (isset($_SERVER['HTTPS'])) :
                             $protocol = "https://";
                         else :
