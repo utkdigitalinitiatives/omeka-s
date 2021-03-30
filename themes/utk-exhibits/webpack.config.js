@@ -4,7 +4,8 @@ module.exports = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     entry: [
         './asset/sass/style.scss',
-        './asset/sass/subtheme/galston/galston.scss'
+        './asset/sass/subtheme/galston/galston.scss',
+        './asset/sass/subtheme/rfta/rfta.scss'
     ],
     output: {
         path: path.resolve(__dirname, 'asset'),

@@ -1,9 +1,9 @@
 .exhibit {
   font-family: $sans;
-  background-position: 0 100%;
+  background-position: 50% 0;
   background-repeat: no-repeat;
   background-size: 100%;
-  min-height: 800px;
+  min-height: 1000px;
 
   > header {
     .exhibit-title {
@@ -27,7 +27,7 @@
     }
 
     .exhibit-navbar {
-      background-color: rgba($white, 92);
+      background-color: rgba($white, 0.92);
       height: $golden-ratio-4;
       max-height: $golden-ratio-4;
       box-shadow: $box-shadow;
