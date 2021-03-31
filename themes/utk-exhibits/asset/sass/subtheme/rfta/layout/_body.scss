@@ -7,6 +7,19 @@ body {
   background-size: cover;
 
   .exhibit-title {
+    color: #504a4c;
+    padding: $golden-ratio-4 0 $golden-ratio-3;
     text-shadow: 2px 5px 5px rgba($white, 0.25);
+    text-align: center;
+
+    span.exhibit-summary {
+      display: block;
+      font-size: $type-2;
+      color: #504a4c;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      line-height: 1.35em;
+    }
   }
+
 }

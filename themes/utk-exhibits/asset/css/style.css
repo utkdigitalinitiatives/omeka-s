@@ -166,6 +166,8 @@ body .utk-notice {
       flex-direction: column; }
       .exhibit-navigation ul li.active {
         font-weight: 700; }
+      .exhibit-navigation ul li:last-child a {
+        border-right: none; }
       .exhibit-navigation ul li a,
       .exhibit-navigation ul li a:visited {
         display: flex;
@@ -177,7 +179,8 @@ body .utk-notice {
         border-right: 1px solid #e0e0e0; }
       .exhibit-navigation ul li a:hover,
       .exhibit-navigation ul li a:focus {
-        background-color: #f6f6f6;
+        background-color: #f6f6f6; }
+      .exhibit-navigation ul li a:focus {
         outline: #006c93;
         outline-style: solid;
         outline-width: 2px; }
