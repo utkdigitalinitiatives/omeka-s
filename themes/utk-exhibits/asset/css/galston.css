@@ -31,7 +31,7 @@
  */
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 body {
-  background-color: #f0ede3; }
+  background-color: #fff; }
 
 .exhibit {
   background-position: 100% -47px;
@@ -54,3 +54,6 @@ main h6 {
   font-family: Georgia, Times, "Times New Roman", serif;
   font-weight: 400;
   color: #705550; }
+
+.exhibit-navigation ul li {
+  font-size: 0.8333rem; }

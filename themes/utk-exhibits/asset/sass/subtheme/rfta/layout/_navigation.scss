@@ -1,28 +1,12 @@
 .exhibit-navigation {
-  margin-bottom: $golden-ratio-4;
   display: flex;
   justify-content: space-around;
 
   ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-shrink: 1;
-    width: auto;
-    box-shadow: $box-shadow;
     background-color: #4e6475;
 
     li {
-      margin: 0;
-      list-style: none;
-      font-size: $type-3;
-      line-height: 1.5em;
-      display: flex;
-      flex-direction: column;
-
       &.active {
-        font-weight: 700;
-
         a {
           background-color: darken(#4e6475, 5) !important;
         }

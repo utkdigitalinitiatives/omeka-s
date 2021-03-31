@@ -146,6 +146,7 @@ body .utk-notice {
       z-index: 1; }
 
 .exhibit-navigation {
+  margin-bottom: 47px;
   border-right: none;
   width: auto;
   display: flex; }

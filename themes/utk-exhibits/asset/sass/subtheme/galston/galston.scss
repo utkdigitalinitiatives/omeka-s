@@ -2,9 +2,10 @@
 @import "./asset/sass/global/normalize";
 @import "./asset/sass/global/variables";
 
-$exhibitBackground: $limestone;
+$exhibitBackground: $white;
 $exhibitHeading: $buckskin;
 $exhibitText: $smokeyx;
 
 // layout
 @import "layout/body";
+@import "layout/navigation";
