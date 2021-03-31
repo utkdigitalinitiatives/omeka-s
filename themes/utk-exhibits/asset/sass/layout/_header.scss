@@ -6,7 +6,7 @@
   min-height: 1000px;
 
   > header {
-    .exhibit-navbar {
+    &.exhibit-masthead {
       background-color: rgba($white, 0.92);
       height: $golden-ratio-4;
       max-height: $golden-ratio-4;
@@ -23,44 +23,8 @@
         padding-top: 2px;
       }
 
-      &--inner {
+      .exhibit-masthead--inner {
         display: flex;
-      }
-
-      ul {
-        margin: 0;
-        padding: 0;
-        display: flex;
-
-        li {
-          margin: 0;
-          padding: 0 14.5px;
-          list-style: none;
-          font-size: $type-2;
-
-          &:first-child {
-            padding-left: 0;
-          }
-
-          &.active {
-            font-weight: 700;
-          }
-
-          a,
-          a:visited {
-            color: $white;
-            display: block;
-            height: 47px;
-            justify-content: center;
-            align-self: center;
-            align-items: center;
-          }
-
-          a:hover,
-          a:focus {
-            color: $white;
-          }
-        }
       }
     }
 

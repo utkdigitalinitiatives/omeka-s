@@ -55,12 +55,12 @@ body .utk-notice {
   background-repeat: no-repeat;
   background-size: 100%;
   min-height: 1000px; }
-  .exhibit > header .exhibit-navbar {
+  .exhibit > header.exhibit-masthead {
     background-color: rgba(255, 255, 255, 0.92);
     height: 47px;
     max-height: 47px;
     box-shadow: 0 2px 5px rgba(51, 51, 51, 0.15); }
-    .exhibit > header .exhibit-navbar .exhibit-domain {
+    .exhibit > header.exhibit-masthead .exhibit-domain {
       height: 47px;
       color: #58595b;
       display: flex;
@@ -69,32 +69,8 @@ body .utk-notice {
       margin-right: 18px;
       font-size: 0.8333rem;
       padding-top: 2px; }
-    .exhibit > header .exhibit-navbar--inner {
+    .exhibit > header.exhibit-masthead .exhibit-masthead--inner {
       display: flex; }
-    .exhibit > header .exhibit-navbar ul {
-      margin: 0;
-      padding: 0;
-      display: flex; }
-      .exhibit > header .exhibit-navbar ul li {
-        margin: 0;
-        padding: 0 14.5px;
-        list-style: none;
-        font-size: 0.8333rem; }
-        .exhibit > header .exhibit-navbar ul li:first-child {
-          padding-left: 0; }
-        .exhibit > header .exhibit-navbar ul li.active {
-          font-weight: 700; }
-        .exhibit > header .exhibit-navbar ul li a,
-        .exhibit > header .exhibit-navbar ul li a:visited {
-          color: #fff;
-          display: block;
-          height: 47px;
-          justify-content: center;
-          align-self: center;
-          align-items: center; }
-        .exhibit > header .exhibit-navbar ul li a:hover,
-        .exhibit > header .exhibit-navbar ul li a:focus {
-          color: #fff; }
   .exhibit > header .exhibit-toggle {
     color: #e0e0e0;
     display: flex;
@@ -168,3 +144,24 @@ body .utk-notice {
       padding-left: 6px !important;
       padding-right: 29px !important;
       z-index: 1; }
+
+.exhibit-navigation ul {
+  margin: 0;
+  padding: 0;
+  display: flex; }
+  .exhibit-navigation ul li {
+    margin: 0;
+    padding: 0 14.5px;
+    list-style: none;
+    font-size: 0.8333rem; }
+    .exhibit-navigation ul li:first-child {
+      padding-left: 0; }
+    .exhibit-navigation ul li.active {
+      font-weight: 700; }
+    .exhibit-navigation ul li a,
+    .exhibit-navigation ul li a:visited {
+      display: block;
+      height: 47px;
+      justify-content: center;
+      align-self: center;
+      align-items: center; }

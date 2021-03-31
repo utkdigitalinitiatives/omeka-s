@@ -1,6 +1,10 @@
 <?php
 $escape = $this->plugin('escapeHtml');
 ?>
-<nav>
-    nav walked here.
+<nav class="exhibit-navigation">
+    <?php
+    echo $site->publicNav()->menu()->renderMenu(null, [
+        'maxDepth' => $this->themeSetting('nav_depth') - 1
+    ]);
+    ?>
 </nav>
