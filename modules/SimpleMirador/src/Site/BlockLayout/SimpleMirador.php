@@ -27,7 +27,13 @@ class SimpleMirador extends AbstractBlockLayout
         $formElementManager = $services->get('FormElementManager');
         $blockFieldset = \SimpleMirador\Form\IIIF::class;
 
+        $dataForm = [];
+        foreach ($block->data() as $key => $value) {
+            $dataForm['o:block[__blockIndex__][o:data][' . $key . ']'] = $value;
+        }
+
         $fieldset = $formElementManager->get($blockFieldset);
+        $fieldset->populateValues($dataForm);
 
         return $view->formCollection($fieldset, false);
     }
