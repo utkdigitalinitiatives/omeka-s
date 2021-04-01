@@ -14,12 +14,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => 'dff9f9114373f569bfa3af958479c8ee9fc8603d',
+    'reference' => '0f8e5da3cf72931f8f049c3702f0e323e95aa810',
     'name' => '__root__',
   ),
   'versions' => 
@@ -35,12 +35,12 @@ private static $installed = array (
     ),
     '__root__' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => 'dff9f9114373f569bfa3af958479c8ee9fc8603d',
+      'reference' => '0f8e5da3cf72931f8f049c3702f0e323e95aa810',
     ),
     'archivelabs/mirador-crosslink-plugin' => 
     array (
@@ -100,6 +100,15 @@ private static $installed = array (
     array (
       'pretty_version' => '2.7.0',
       'version' => '2.7.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => NULL,
+    ),
+    'projectmirador/mirador-integration' => 
+    array (
+      'pretty_version' => '0.0.1',
+      'version' => '0.0.1.0',
       'aliases' => 
       array (
       ),

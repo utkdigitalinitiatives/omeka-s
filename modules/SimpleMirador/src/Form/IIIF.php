@@ -1,5 +1,6 @@
 <?php declare(strict_types=1);
-namespace SimpleMirador\Site;
+
+namespace SimpleMirador\Form;
 
 use Laminas\Form\Element;
 use Laminas\Form\Fieldset;
@@ -10,24 +11,14 @@ class IIIF extends Fieldset
     {
         $this
             ->add([
-                'name' => 'o:block[__blockIndex__][o:data][heading]',
-                'type' => Element\Text::class,
+                'name' => 'o:block[__blockIndex__][o:data][manifest]',
+                'type' => Element\Textarea::class,
                 'options' => [
-                    'label' => 'Block title', // @translate
-                    'info' => 'Heading for the block, if any.', // @translate
+                    'label' => 'IIIF Manifest', // @translate
+                    'info' => 'URI for 3.0 manifest', // @translate
                 ],
                 'attributes' => [
-                    'id' => 'twitter-heading',
-                ],
-            ])
-            ->add([
-                'name' => 'o:block[__blockIndex__][o:data][account]',
-                'type' => Element\Text::class,
-                'options' => [
-                    'label' => 'Account', // @translate
-                ],
-                'attributes' => [
-                    'id' => 'twitter-account',
+                    'id' => 'iiif-manifest',
                 ],
             ]);
     }

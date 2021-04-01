@@ -5,6 +5,7 @@ namespace Mirador\Form;
 use Laminas\Form\Element;
 use Laminas\Form\Fieldset;
 use Mirador\Form\Element\OptionalSelect;
+use Mirador\Form\Element\OptionalUrl;
 
 class SettingsFieldset extends Fieldset
 {
@@ -119,6 +120,17 @@ class SettingsFieldset extends Fieldset
                 ],
                 'attributes' => [
                     'id' => 'mirador_config_collection',
+                ],
+            ])
+            ->add([
+                'name' => 'mirador_annotation_endpoint',
+                'type' => OptionalUrl::class,
+                'options' => [
+                    'label' => 'Endpoint to store annotations externally', // @translate
+                    'info' => 'This option is used only if the plugin Annotations is enabled, and useful only with an external annotation server.', // @translate
+                ],
+                'attributes' => [
+                    'id' => 'mirador_annotation_endpoint',
                 ],
             ])
 

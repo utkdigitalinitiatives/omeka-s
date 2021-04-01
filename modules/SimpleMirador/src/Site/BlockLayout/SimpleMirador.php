@@ -20,19 +20,29 @@ class SimpleMirador extends AbstractBlockLayout
         SiteRepresentation $site,
         SitePageRepresentation $page = null,
         SitePageBlockRepresentation $block = null
-    ) {
-        return $view->blockAttachmentsForm($block);
+    )
+    {
+
+        $services = $site->getServiceLocator();
+        $formElementManager = $services->get('FormElementManager');
+        $blockFieldset = \SimpleMirador\Form\IIIF::class;
+
+        $fieldset = $formElementManager->get($blockFieldset);
+
+        return $view->formCollection($fieldset, false);
     }
 
     public function render(PhpRenderer $view, SitePageBlockRepresentation $block)
     {
-        $attachments = $block->attachments();
-        if (!$attachments) {
-            return 'No resource selected'; // @translate
-        }
 
-        return $view->partial('common/block-layout/simple-mirador', [
-            'attachments' => $attachments,
-        ]);
+//        $attachments = $block->attachments();
+//        if (!$attachments) {
+//            return 'No resource selected'; // @translate
+//        }
+//
+//        return $view->partial('common/block-layout/simple-mirador', [
+//            'attachments' => $attachments,
+//        ]);
+
     }
 }

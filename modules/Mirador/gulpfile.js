@@ -13,14 +13,14 @@ function execCommand(command, args, cb) {
 };
 
 gulp.task('npm-install', function (cb) {
-    return execCommand('npm', ['--prefix', './mirador-integration', 'install'], cb);
+    return execCommand('npm', ['--prefix', './vendor/projectmirador/mirador-integration', 'install'], cb);
 });
 
 gulp.task('vanilla', gulp.series(
     function () {
         return gulp.src([
-                'mirador-integration/node_modules/mirador/dist/mirador.min.js',
-                'mirador-integration/node_modules/mirador/dist/mirador.min.js.LICENSE.txt',
+                'vendor/projectmirador/mirador-integration/node_modules/mirador/dist/mirador.min.js',
+                'vendor/projectmirador/mirador-integration/node_modules/mirador/dist/mirador.min.js.LICENSE.txt',
             ])
             .pipe(gulp.dest('asset/vendor/mirador'));
     },
@@ -28,10 +28,10 @@ gulp.task('vanilla', gulp.series(
 
 gulp.task('bundle-full', gulp.series(
     function (cb) {
-        return execCommand('npm', ['--prefix', './mirador-integration', 'run', 'webpack'], cb);
+        return execCommand('npm', ['--prefix', './vendor/projectmirador/mirador-integration', 'run', 'webpack'], cb);
     },
     function () {
-        return gulp.src('mirador-integration/webpack/dist/*.js')
+        return gulp.src('vendor/projectmirador/mirador-integration/webpack/dist/*.js')
             .pipe(concat('mirador-bundle.min.js'))
             .pipe(gulp.dest('asset/vendor/mirador/'));
     },
@@ -39,10 +39,10 @@ gulp.task('bundle-full', gulp.series(
 
 gulp.task('bundle-usual', gulp.series(
     function (cb) {
-        return execCommand('npm', ['--prefix', './mirador-integration', 'run', 'webpack-usual'], cb);
+        return execCommand('npm', ['--prefix', './vendor/projectmirador/mirador-integration', 'run', 'webpack-usual'], cb);
     },
     function () {
-        return gulp.src('mirador-integration/webpack/dist/*.js')
+        return gulp.src('vendor/projectmirador/mirador-integration/webpack/dist/*.js')
             .pipe(concat('mirador-pack.min.js'))
             .pipe(gulp.dest('asset/vendor/mirador/'));
     },

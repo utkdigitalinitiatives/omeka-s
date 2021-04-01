@@ -73,7 +73,7 @@ class Mirador extends AbstractHelper
         }
 
         // Determine the url of the manifest from a field in the metadata.
-        $externalManifest = $view->iiifManifestExternal($resource);
+        $externalManifest = $view->iiifManifestExternal($resource, $iiifServerIsActive);
         if ($externalManifest) {
             return $this->render($externalManifest, $options, $resourceName, true);
         }
@@ -89,6 +89,7 @@ class Mirador extends AbstractHelper
             case 'items':
                 // Currently, an item without files is unprocessable.
                 $medias = $resource->media();
+
                 if (!count($medias)) {
                     // return $view->translate('This item has no files and is not displayable.');
                     return '';
@@ -145,10 +146,11 @@ class Mirador extends AbstractHelper
         $miradorPlugins = $setting('mirador_plugins', []);
 
         // Optimize the size of the bundle.
+        $internalConfig = '';
+        $annotationEndpoint = null;
         if (empty($miradorPlugins)) {
             // Vanilla Mirador.
             $miradorVendorJs = 'vendor/mirador/mirador.min.js';
-            $internalConfig = '';
         } elseif (in_array('annotations', $miradorPlugins)) {
             // Heavy Mirador: include Annotation plugin and all others ones.
             $miradorVendorJs = 'vendor/mirador/mirador-bundle.min.js';
@@ -163,10 +165,10 @@ class Mirador extends AbstractHelper
     },
 }
 JS;
+            $annotationEndpoint = $setting('mirador_annotation_endpoint');
         } else {
             // Common or small plugins.
             $miradorVendorJs = 'vendor/mirador/mirador-pack.min.js';
-            $internalConfig = '';
         }
 
         $headScript
@@ -258,6 +260,7 @@ JS;
         return $view->partial('common/helper/mirador', [
             'config' => $configJson,
             'viewerId' => $viewerId,
+            'annotationEndpoint' => $annotationEndpoint,
         ]);
     }
 

@@ -61,32 +61,34 @@ composer install --no-dev
   but may not be used.
 
   So, to simplify installation of Mirador 3 and plugins and to keep it as small
-  as possible, this module provides three versions: vanilla Mirador, Mirador
+  as possible, Mirador is managed as a separate repository [Mirador integration Omeka].
+
+  This repository provides three versions of Mirador: vanilla Mirador, Mirador
   with common plugins, Mirador with all plugins. The choice is transparent
   inside Omeka and the appropriate bundle is included according to the selected
   plugins in main settings or in site settings.
 
-  Installation of Mirador 3 requires npm, that should be available for the
-  development (it can be removed for production, just as directories "vendor",
-  "node_modules" and "mirador-integration").
+  Development of a specific version of Mirador 3 requires npm. If you want to
+  remove plugins or to include new plugins from the bundle,  update the files
+  [vendor/projectmirador/mirador-integration/package.json] and [vendor/projectmirador/mirador-integration/src/index.js].
+  See more information in the [included package]. You may have to fork the
+  repository and to set it in package.json. The file gulpfile.js inside the
+  present module is used only as a shortcut to it.
 
-```sh
-# Install mirador 3 and plugins in asset/vendor/mirador
-npm install
-gulp
-```
-
-  If you want to remove plugins or to include new plugins from the bundle,
-  update the files [mirador-integration/package.json] and [mirador-integration/src/index.js].
-  See more information in the [included repository].
   See [official documentation about Mirador plugins].
 
-Then install it like any other Omeka module.
+```sh
+# Compile the three versions of Mirador 3 and copy them in asset/vendor/mirador.
+cd vendor/projectmirador/mirador-integration
+npm install
+cd ../../..
+gulp
+```
 
 * Access to IIIF images
 
 Mirador is based on IIIF, so an image server compliant with this protocol is
-required to use it. So, install the module [IIIF Server] if needed.
+required to use it. So, install the module [Image Server] if needed.
 
 If you need to display big images (bigger than 1 to 10 MB according to your
 server, your network, and your users), use an external image server, or create
@@ -100,7 +102,9 @@ Usage
 
 ### Configuration
 
-Only one option can be set in the main config (the manifest property, if any).
+The url of the manifest of the items should be set inside the property specified
+in the config form of the module. If you don’t have an IIIF Server, install the
+module [IIIF Server].
 
 The other ones can be set differently for each site:
 
@@ -162,7 +166,8 @@ the details of the file [settings.js].
 ### Display
 
 If the [IIIF Server] is installed, all resources of Omeka S are automatically
-available by Mirador.
+available by the viewer, else the url of the manifest should be set in the
+configured property.
 
 The viewer is always available at `http://www.example.com/item-set/{item-set id}/mirador`
 and `http://www.example.com/item/{item id}/mirador`. Furthermore, it is
@@ -217,7 +222,7 @@ for Mirador v2, `data/plugins/plugins-mirador-2.php` and `view/common/helper/mir
 
 - [Annotations]: Note: only two backends are supported currently, local storage
   (inside browser persistent cache; it **requires a `https` site** for security),
-  and [Annotot] (**requires to be uncommented** inside file [mirador-integration/src/index.js]).
+  and [Annotot] (requires its endpoint).
 - [Download]
 - [Image Tools]
 - [Ruler]
@@ -329,9 +334,12 @@ University of Applied Sciences and Arts, Basel Academy of Music, Academy of Musi
 [Generic]: https://gitlab.com/Daniel-KM/Omeka-S-module-Generic
 [Blocks Disposition]: https://gitlab.com/Daniel-KM/Omeka-S-module-BlocksDisposition
 [react]: https://reactjs.org
+[Mirador integration Omeka]: https://gitlab.com/Daniel-KM/Mirador-integration-Omeka
 [List of images in fullscreen]: #list-of-images-in-fullscreen-in-mirador-2
-[mirador-integration/package.json]: https://gitlab.com/Daniel-KM/Omeka-S-module-Mirador/-/blob/master/mirador-integration/package.json
-[mirador-integration/src/index.js]: https://gitlab.com/Daniel-KM/Omeka-S-module-Mirador/-/blob/master/mirador-integration/src/index.js
+[vendor/projectmirador/mirador-integration/package.json]: https://gitlab.com/Daniel-KM/Mirador-integration-Omeka/-/blob/master/package.json
+[vendor/projectmirador/mirador-integration/src/index.js]: https://gitlab.com/Daniel-KM/Mirador-integration-Omeka/-/blob/master/src/index.js
+[included package]: https://gitlab.com/Daniel-KM/Mirador-integration-Omeka
+[official documentation about Mirador plugins]: https://github.com/ProjectMirador/mirador/wiki/Mirador-3-plugins
 [Annotate]: https://gitlab.com/Daniel-KM/Omeka-S-module-Annotate
 [Annotot]: https://rubygems.org/gems/annotot
 [included repository]: https://gitlab.com/Daniel-KM/Omeka-S-module-Mirador/-/blob/master/mirador-integration/README.md

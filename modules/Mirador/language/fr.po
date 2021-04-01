@@ -9,12 +9,12 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-22 00:00+0000\n"
 "PO-Revision-Date: 2021-02-22 00:00+0000\n"
+"Last-Translator: Daniel Berthereau <Daniel.fr@Berthereau.net>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Last-Translator: Daniel Berthereau <Daniel.fr@Berthereau.net>\n"
-"Language-Team: \n"
 "X-Generator: Poedit 2.4.2\n"
 
 #: Module.php:37
@@ -107,23 +107,35 @@ msgstr "Cet objet sera fusionné avec celui préparé par le module."
 msgid "Mirador config as object string for v3 (collection)"
 msgstr "Configuration Mirador en chaîne objet pour la v3 (collection)"
 
+#: src/Form/SettingsFieldset.php:128
+msgid "Endpoint to store annotations externally"
+msgstr "Point d’accès pour enregistrer les annotations à l’extérieur"
+
 #: src/Form/SettingsFieldset.php:129
+msgid ""
+"This option is used only if the plugin Annotations is enabled, and useful "
+"only with an external annotation server."
+msgstr ""
+"Cette option est utilisée seulement quand l’extension Annotations est "
+"activée et avec un serveur d’annotations externe ."
+
+#: src/Form/SettingsFieldset.php:140
 msgid "Preselect manifests from the same collection"
 msgstr "Présélectionner des manifestes à partir de la même collection"
 
-#: src/Form/SettingsFieldset.php:130
+#: src/Form/SettingsFieldset.php:141
 msgid "Set a number of items to preselect. IiifServer should be enabled."
 msgstr ""
 "Indiquer le nombre de contenus à présélectionner. Le module IIIF Server doit "
 "être actif."
 
-#: src/View/Helper/Mirador.php:328
+#: src/View/Helper/Mirador.php:330
 msgid "Settings for Mirador config of items is not a valid json."
 msgstr ""
 "Les paramètres de la configuration de Mirador pour les contenus ne sont pas "
 "un json valide."
 
-#: src/View/Helper/Mirador.php:347
+#: src/View/Helper/Mirador.php:349
 msgid "Settings for Mirador config of collections is not a valid json."
 msgstr ""
 "Les paramètres de la configuration de Mirador pour les collections ne sont "

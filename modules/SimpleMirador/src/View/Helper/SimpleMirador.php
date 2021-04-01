@@ -1,12 +1,12 @@
 <?php declare(strict_types=1);
 
-namespace Mirador\View\Helper;
+namespace SimpleMirador\View\Helper;
 
 use Laminas\View\Helper\AbstractHelper;
 use Omeka\Api\Representation\AbstractResourceEntityRepresentation;
 use Omeka\Site\Theme\Theme;
 
-class Mirador extends AbstractHelper
+class SimpleMirador extends AbstractHelper
 {
     /**
      * @var Theme The current theme, if any
@@ -62,7 +62,7 @@ class Mirador extends AbstractHelper
             if (!$iiifServerIsActive) {
                 return '';
             }
-            $urlManifest = $view->iiifUrl($resource);
+            $urlManifest = 'blah';
             return $this->render($urlManifest, $options, 'multiple');
         }
 

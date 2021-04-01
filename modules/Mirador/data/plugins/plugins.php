@@ -12,7 +12,7 @@
  * bundle, so they are not available separately, but hidden.
  */
 
- return [
+return [
     'annotations' => 'Annotations',
     'dl' => 'Download files',
     'image-tools' => 'Image tools',

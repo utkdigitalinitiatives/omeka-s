@@ -97,6 +97,18 @@
             "install-path": "../mirador/mirador"
         },
         {
+            "name": "projectmirador/mirador-integration",
+            "version": "0.0.1",
+            "version_normalized": "0.0.1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://gitlab.com/Daniel-KM/Mirador-integration-Omeka/-/archive/master/Mirador-integration-Omeka-master.zip"
+            },
+            "type": "library",
+            "installation-source": "dist",
+            "install-path": "../projectmirador/mirador-integration"
+        },
+        {
             "name": "slowprog/composer-copy-file",
             "version": "0.3.3",
             "version_normalized": "0.3.3.0",
