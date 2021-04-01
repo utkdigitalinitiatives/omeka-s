@@ -4,14 +4,5 @@
  * @var \Omeka\Api\Representation\SiteBlockAttachmentRepresentation[] $attachments
  */
 
-$resources = [];
-foreach ($attachments as $attachment) {
-    $item = $attachment->item();
-    if ($item) {
-        $resources[] = $item;
-    }
-}
-
-// Display the viewer with the specified resources.
-echo $this->mirador($resources);
+print $manifest;
 
