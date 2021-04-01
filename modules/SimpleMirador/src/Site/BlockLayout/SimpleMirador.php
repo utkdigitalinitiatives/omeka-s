@@ -41,6 +41,8 @@ class SimpleMirador extends AbstractBlockLayout
     public function render(PhpRenderer $view, SitePageBlockRepresentation $block)
     {
 
+        print_r ($block->dataValue('manifest'));
+
 //        $attachments = $block->attachments();
 //        if (!$attachments) {
 //            return 'No resource selected'; // @translate
