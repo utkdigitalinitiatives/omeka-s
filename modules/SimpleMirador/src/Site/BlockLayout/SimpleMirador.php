@@ -43,14 +43,5 @@ class SimpleMirador extends AbstractBlockLayout
 
         print_r ($block->dataValue('manifest'));
 
-//        $attachments = $block->attachments();
-//        if (!$attachments) {
-//            return 'No resource selected'; // @translate
-//        }
-//
-//        return $view->partial('common/block-layout/simple-mirador', [
-//            'attachments' => $attachments,
-//        ]);
-
     }
 }
