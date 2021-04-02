@@ -4,5 +4,12 @@
  * @var \Omeka\Api\Representation\SiteBlockAttachmentRepresentation[] $attachments
  */
 
-print $manifest;
+?>
 
+<div id="simple-mirador"
+     data-manifest="<?php echo $manifest; ?>">
+</div>
+
+<script type="text/javascript"
+        src="<?php echo $this->assetUrl('mirador.js', 'SimpleMirador'); ?>">
+</script>
