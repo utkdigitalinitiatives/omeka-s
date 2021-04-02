@@ -18,6 +18,11 @@ return [
             Form\IIIF::class => Form\IIIF::class,
         ],
     ],
+    'simple_mirador' => [
+        'iiif' => [
+            'manifest' => ''
+        ],
+    ],
 ];
 
 ?>
