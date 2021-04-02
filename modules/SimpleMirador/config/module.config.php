@@ -8,11 +8,6 @@ return [
             dirname(__DIR__) . '/view',
         ],
     ],
-    'view_helpers' => [
-        'factories' => [
-            'mirador' => Service\ViewHelper\SimpleMiradorFactory::class,
-        ],
-    ],
     'block_layouts' => [
         'invokables' => [
             'mirador' => Site\BlockLayout\SimpleMirador::class,
