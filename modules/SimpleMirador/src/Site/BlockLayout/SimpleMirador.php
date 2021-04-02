@@ -25,10 +25,13 @@ class SimpleMirador extends AbstractBlockLayout
 
         $services = $site->getServiceLocator();
         $formElementManager = $services->get('FormElementManager');
+        $defaultSettings = $services->get('Config')['simple_mirador']['iiif'];
         $blockFieldset = \SimpleMirador\Form\IIIF::class;
 
+        $data = $block ? $block->data() + $defaultSettings : $defaultSettings;
+
         $dataForm = [];
-        foreach ($block->data() as $key => $value) {
+        foreach ($data as $key => $value) {
             $dataForm['o:block[__blockIndex__][o:data][' . $key . ']'] = $value;
         }
 
