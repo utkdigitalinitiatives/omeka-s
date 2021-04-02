@@ -14,31 +14,29 @@ class App extends Component {
   render() {
     const { manifest } = this.state;
     return (
-      <div className="container">
-        <Mirador
-          config={{
-            id: 'mirador',
-            window: {
-              allowFullscreen: false,
-              sideBarPanel: 'info',
-              hideWindowTitle: false,
-              sideBarOpen: true,
-              highlightAllAnnotations: true,
-              forceDrawAnnotations: true,
-              defaultSidebarPanelWidth: 300,
+      <Mirador
+        config={{
+          id: 'mirador',
+          window: {
+            allowFullscreen: false,
+            sideBarPanel: 'info',
+            hideWindowTitle: false,
+            sideBarOpen: true,
+            highlightAllAnnotations: true,
+            forceDrawAnnotations: true,
+            defaultSidebarPanelWidth: 300,
+          },
+          windows: [
+            {
+              loadedManifest: manifest,
             },
-            windows: [
-              {
-                loadedManifest: manifest,
-              },
-            ],
-            workspaceControlPanel: {
-              enabled: false,
-            },
-          }}
-          plugins={[]}
-        />
-      </div>
+          ],
+          workspaceControlPanel: {
+            enabled: false,
+          },
+        }}
+        plugins={[]}
+      />
     );
   }
 }
