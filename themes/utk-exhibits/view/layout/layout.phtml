@@ -6,6 +6,7 @@ $this->htmlElement('html')->setAttribute('lang', $this->lang());
 $this->headMeta()->setCharset('utf-8');
 $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1');
 $this->headTitle($siteTitle)->setSeparator(' - ');
+$this->headLink()->prependStylesheet('https://www.lib.utk.edu/wp-content/mu-plugins/utk_library/assets/react/header/header.css');
 $this->headLink()->prependStylesheet($this->assetUrl('css/style.css'));
 $this->headScript()->prependFile($this->assetUrl('js/default.js'));
 $this->headScript()->prependFile($this->assetUrl('js/global.js', 'Omeka'));
