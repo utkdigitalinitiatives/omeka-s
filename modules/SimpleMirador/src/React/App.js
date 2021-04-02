@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import Mirador from './components/Mirador';
+import Config from "./components/Config";
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      manifest: 'https://digital.lib.utk.edu/assemble/manifest/heilman/600',
+      manifest: Config.Manifest,
     };
   }
 
   render() {
     const { manifest } = this.state;
-
     return (
       <div className="container">
         <Mirador

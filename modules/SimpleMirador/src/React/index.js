@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('simple-mirador')
-);
-
-module.hot.accept();
+if (document.getElementById('simple-mirador')) {
+    ReactDOM.render(<App />, document.getElementById('simple-mirador'));
+}
