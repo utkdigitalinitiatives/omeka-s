@@ -17,7 +17,10 @@ section.exposition {
       width: 50%; }
 
 figure.exposition-teaser {
-  padding: 2em; }
+  margin: 2em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column; }
   figure.exposition-teaser img {
     max-width: 100%; }
   figure.exposition-teaser figcaption {
@@ -28,3 +31,12 @@ figure.exposition-teaser {
       margin-top: 0.5em;
       font-size: 0.8333em;
       line-height: 1.35rem; }
+
+.exposition-layout-default figure.exposition-teaser {
+  flex-direction: row; }
+  .exposition-layout-default figure.exposition-teaser figcaption {
+    margin-left: 2em;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }

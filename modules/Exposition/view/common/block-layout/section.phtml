@@ -16,19 +16,22 @@ foreach (array('layout', 'orientation') as $field) {
 
 ?>
 <section class="<?php print $class; ?>">
-    <h2>
-        <?php print $section['heading']; ?>
-    </h2>
     <div class="exposition-content">
         <?php if ($section['orientation'] === 'reverse') : ?>
             <div class="exposition-content--item">
                 <?php echo $this->partial('exposition/teaser.phtml'); ?>
             </div>
             <div class="exposition-content--body">
+                <h2>
+                    <?php print $section['heading']; ?>
+                </h2>
                 <?php print $section['body']; ?>
             </div>
         <?php else : ?>
             <div class="exposition-content--body">
+                <h2>
+                    <?php print $section['heading']; ?>
+                </h2>
                 <?php print $section['body']; ?>
             </div>
             <div class="exposition-content--item">
