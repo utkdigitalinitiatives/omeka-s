@@ -15,7 +15,15 @@ $siteId = $site->id();
             endif;
 
             // clean this up and convert to a controller
-            $response = file_get_contents($protocol . $_SERVER["HTTP_HOST"] . "/api/sites");
+
+            $ssl = array(
+                "ssl" => array(
+                    "verify_peer" => false,
+                    "verify_peer_name" => false,
+                ),
+            );
+
+            $response = file_get_contents($protocol . $_SERVER["HTTP_HOST"] . "/api/sites", false, stream_context_create($ssl));
             $sites = json_decode($response);
             $instance = array();
 
