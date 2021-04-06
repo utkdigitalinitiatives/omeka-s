@@ -5,11 +5,16 @@ section.exposition {
   section.exposition:last-child {
     margin-bottom: 0; }
   section.exposition .exposition-content {
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
     section.exposition .exposition-content > div {
-      width: 50%;
       flex-shrink: 0;
       flex-grow: 0; }
+  section.exposition.exposition-layout-column .exposition-content {
+    display: flex;
+    flex-direction: row; }
+    section.exposition.exposition-layout-column .exposition-content > div {
+      width: 50%; }
 
 figure.exposition-teaser {
   padding: 2em; }

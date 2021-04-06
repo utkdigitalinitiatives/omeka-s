@@ -48,7 +48,9 @@ class Section extends Fieldset
                 'type' => Element\Select::class,
                 'options' => [
                     'label' => 'Layout',
-                    'value_options' => array('Column'),
+                    'value_options' => array(
+                        'column' => 'Column'
+                    ),
                     'empty_option' => 'Default',
                 ],
                 'attributes' => [
@@ -60,7 +62,9 @@ class Section extends Fieldset
                 'type' => Element\Select::class,
                 'options' => [
                     'label' => 'Orientation',
-                    'value_options' => array('Reverse'),
+                    'value_options' => array(
+                        'reverse' => 'Reverse'
+                    ),
                     'empty_option' => 'Default',
                 ],
                 'attributes' => [

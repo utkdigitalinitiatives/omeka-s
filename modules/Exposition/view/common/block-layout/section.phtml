@@ -4,17 +4,36 @@
  * @var \Omeka\Api\Representation\SiteBlockAttachmentRepresentation[] $attachments
  */
 
+$class = "exposition exposition-section";
+
+foreach (array('layout', 'orientation') as $field) {
+    if ($section[$field]) {
+        $class .= ' exposition-' . $field . '-' . $section[$field];
+    } else {
+        $class .= ' exposition-' . $field .'-default';
+    };
+}
+
 ?>
-<section class="exposition exposition-section">
+<section class="<?php print $class; ?>">
     <h2>
         <?php print $section['heading']; ?>
     </h2>
     <div class="exposition-content">
-        <div class="exposition-content--body">
-            <?php print $section['body']; ?>
-        </div>
-        <div class="exposition-content--item">
-            <?php echo $this->partial('exposition/teaser.phtml'); ?>
-        </div>
+        <?php if ($section['orientation'] === 'reverse') : ?>
+            <div class="exposition-content--item">
+                <?php echo $this->partial('exposition/teaser.phtml'); ?>
+            </div>
+            <div class="exposition-content--body">
+                <?php print $section['body']; ?>
+            </div>
+        <?php else : ?>
+            <div class="exposition-content--body">
+                <?php print $section['body']; ?>
+            </div>
+            <div class="exposition-content--item">
+                <?php echo $this->partial('exposition/teaser.phtml'); ?>
+            </div>
+        <?php endif; ?>
     </div>
 </section>
