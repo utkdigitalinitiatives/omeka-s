@@ -10,17 +10,21 @@ return [
     ],
     'block_layouts' => [
         'invokables' => [
-            'static-content' => Site\BlockLayout\StaticContent::class,
+            'section' => Site\BlockLayout\Section::class,
         ],
     ],
     'form_elements' => [
         'invokables' => [
-            Form\StaticContent::class => Form\StaticContent::class,
+            Form\Section::class => Form\Section::class,
         ],
     ],
     'exposition' => [
-        'static-content' => [
-            'manifest' => ''
+        'section' => [
+            'heading' => '',
+            'body' => '',
+            'manifest' => '',
+            'layout' => '',
+            'orientation' => ''
         ],
     ],
 ];

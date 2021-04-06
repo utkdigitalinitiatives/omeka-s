@@ -8,11 +8,11 @@ use Omeka\Api\Representation\SitePageRepresentation;
 use Omeka\Api\Representation\SiteRepresentation;
 use Omeka\Site\BlockLayout\AbstractBlockLayout;
 
-class StaticContent extends AbstractBlockLayout
+class Section extends AbstractBlockLayout
 {
     public function getLabel()
     {
-        return 'Exposition - Static Content'; // @translate
+        return 'Exposition: Section'; // @translate
     }
 
     public function form(
@@ -25,8 +25,8 @@ class StaticContent extends AbstractBlockLayout
 
         $services = $site->getServiceLocator();
         $formElementManager = $services->get('FormElementManager');
-        $defaultSettings = $services->get('Config')['exposition']['static-content'];
-        $blockFieldset = \Exposition\Form\StaticContent::class;
+        $defaultSettings = $services->get('Config')['exposition']['section'];
+        $blockFieldset = \Exposition\Form\Section::class;
 
         $data = $block ? $block->data() + $defaultSettings : $defaultSettings;
 
@@ -43,7 +43,7 @@ class StaticContent extends AbstractBlockLayout
 
     public function render(PhpRenderer $view, SitePageBlockRepresentation $block)
     {
-        return $view->partial('common/block-layout/static-content', [
+        return $view->partial('common/block-layout/section', [
             'section' => array(
                 'heading' => $block->dataValue('heading'),
                 'body' => $block->dataValue('body'),

@@ -5,7 +5,7 @@ namespace Exposition\Form;
 use Laminas\Form\Element;
 use Laminas\Form\Fieldset;
 
-class StaticContent extends Fieldset
+class Section extends Fieldset
 {
     public function init(): void
     {
@@ -17,7 +17,7 @@ class StaticContent extends Fieldset
                     'label' => 'Heading'
                 ],
                 'attributes' => [
-                    'id' => 'exposition-static-heading',
+                    'id' => 'exposition-section-heading',
                     'required' => true,
                 ],
             ])
@@ -40,7 +40,7 @@ class StaticContent extends Fieldset
                     'info' => 'URI for 3.0 manifest',
                 ],
                 'attributes' => [
-                    'id' => 'exposition-static-iiif',
+                    'id' => 'exposition-section-iiif',
                 ],
             ])
             ->add([
@@ -52,7 +52,7 @@ class StaticContent extends Fieldset
                     'empty_option' => 'Default',
                 ],
                 'attributes' => [
-                    'id' => 'exposition-static-layout'
+                    'id' => 'exposition-section-layout'
                 ],
             ])
             ->add([
@@ -64,7 +64,7 @@ class StaticContent extends Fieldset
                     'empty_option' => 'Default',
                 ],
                 'attributes' => [
-                    'id' => 'exposition-static-orientation'
+                    'id' => 'exposition-section-orientation'
                 ],
             ]);
     }
