@@ -10,6 +10,7 @@ if ($json->{'@context'} === 'https://iiif.io/api/presentation/3/context.json') :
     $label = $json->label->en[0];
     $summary = $json->summary->en[0];
     $canvas = $json->items[0]->items[0]->items[0]->body[0]->id;
+    $canvas = $json->items[0]->items[0]->items[0]->body[0]->id;
 
 ?>
 
@@ -20,10 +21,16 @@ if ($json->{'@context'} === 'https://iiif.io/api/presentation/3/context.json') :
                  alt="<?php print $label; ?>"
             />
         </a>
-        <figcaption>
-            <cite><?php print $label; ?></cite>
-            <p><?php print $summary; ?></p>
-        </figcaption>
+        <div class="exposition-teaser--content">
+            <figcaption>
+                <cite><?php print $label; ?></cite>
+                <p><?php print $summary; ?></p>
+            </figcaption>
+            <ul>
+                <li><a href="#modal">Expand Item</a></li>
+                <li><a href="#dcuri">View in Digital Collection</a></li>
+            </ul>
+        </div>
     </figure>
 
 <?php endif; ?>
