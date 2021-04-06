@@ -5,5 +5,16 @@
  */
 
 ?>
-
-<?php print_r ($section); ?>
+<section class="exposition exposition-section">
+    <h2>
+        <?php print $section['heading']; ?>
+    </h2>
+    <div class="exposition-content">
+        <div class="exposition-content--body">
+            <?php print $section['body']; ?>
+        </div>
+        <div class="exposition-content--item">
+            <?php echo $this->partial('exposition/teaser.phtml'); ?>
+        </div>
+    </div>
+</section>

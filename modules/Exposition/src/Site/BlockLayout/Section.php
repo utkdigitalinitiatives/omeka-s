@@ -43,6 +43,9 @@ class Section extends AbstractBlockLayout
 
     public function render(PhpRenderer $view, SitePageBlockRepresentation $block)
     {
+
+        $view->headLink()->appendStylesheet($view->assetUrl('css/exposition.css', 'Exposition'));
+
         return $view->partial('common/block-layout/section', [
             'section' => array(
                 'heading' => $block->dataValue('heading'),

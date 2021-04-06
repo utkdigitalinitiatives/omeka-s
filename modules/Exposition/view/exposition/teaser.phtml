@@ -1,0 +1,29 @@
+<?php
+
+// clean this up and convert to a controller
+
+$response = file_get_contents($section['manifest']);
+$json = json_decode($response);
+
+if ($json->{'@context'} === 'https://iiif.io/api/presentation/3/context.json') :
+
+    $label = $json->label->en[0];
+    $summary = $json->summary->en[0];
+    $canvas = $json->items[0]->items[0]->items[0]->body[0]->id;
+
+?>
+
+    <figure class="exposition-teaser"
+            data-manifest="<?php print $section['manifest']; ?>">
+        <a href="#modal">
+            <img src="<?php print $canvas; ?>"
+                 alt="<?php print $label; ?>"
+            />
+        </a>
+        <figcaption>
+            <cite><?php print $label; ?></cite>
+            <p><?php print $summary; ?></p>
+        </figcaption>
+    </figure>
+
+<?php endif; ?>
