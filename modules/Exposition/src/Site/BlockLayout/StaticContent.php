@@ -44,7 +44,13 @@ class StaticContent extends AbstractBlockLayout
     public function render(PhpRenderer $view, SitePageBlockRepresentation $block)
     {
         return $view->partial('common/block-layout/static-content', [
-            'manifest' => $block->dataValue('manifest'),
+            'section' => array(
+                'heading' => $block->dataValue('heading'),
+                'body' => $block->dataValue('body'),
+                'manifest' => $block->dataValue('manifest'),
+                'layout' => $block->dataValue('layout'),
+                'orientation' => $block->dataValue('orientation'),
+            ),
         ]);
     }
 }

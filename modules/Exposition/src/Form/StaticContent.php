@@ -18,23 +18,26 @@ class StaticContent extends Fieldset
                 ],
                 'attributes' => [
                     'id' => 'exposition-static-heading',
-                    'required' => true
+                    'required' => true,
                 ],
             ])
             ->add([
-                'name' => 'o:block[__blockIndex__][o:data][html]',
+                'name' => 'o:block[__blockIndex__][o:data][body]',
                 'type' => Element\Textarea::class,
+                'options' => [
+                    'label' => 'Body',
+                ],
                 'attributes' => [
-                    'label' => 'IIIF Manifest', // @translate
-                    'class' => 'block-html full wysiwyg',
+                    'label' => 'Body',
+                    'class' => 'block-html full wysiwyg'
                 ],
             ])
             ->add([
                 'name' => 'o:block[__blockIndex__][o:data][manifest]',
                 'type' => Element\Textarea::class,
                 'options' => [
-                    'label' => 'IIIF Manifest', // @translate
-                    'info' => 'URI for 3.0 manifest', // @translate
+                    'label' => 'IIIF Manifest',
+                    'info' => 'URI for 3.0 manifest',
                 ],
                 'attributes' => [
                     'id' => 'exposition-static-iiif',
@@ -44,7 +47,7 @@ class StaticContent extends Fieldset
                 'name' => 'o:block[__blockIndex__][o:data][layout]',
                 'type' => Element\Select::class,
                 'options' => [
-                    'label' => 'Layout', // @translate
+                    'label' => 'Layout',
                     'value_options' => array('Column'),
                     'empty_option' => 'Default',
                 ],
@@ -56,7 +59,7 @@ class StaticContent extends Fieldset
                 'name' => 'o:block[__blockIndex__][o:data][orientation]',
                 'type' => Element\Select::class,
                 'options' => [
-                    'label' => 'Orientation', // @translate
+                    'label' => 'Orientation',
                     'value_options' => array('Reverse'),
                     'empty_option' => 'Default',
                 ],
