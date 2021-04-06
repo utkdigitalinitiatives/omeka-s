@@ -8,6 +8,18 @@ figure.exposition-teaser {
     max-width: 100%;
   }
 
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      padding: 0;
+      text-transform: uppercase;
+      font-size: 0.7222em;
+    }
+  }
+
   figcaption {
     margin-top: 1em;
 
@@ -26,8 +38,11 @@ figure.exposition-teaser {
 .exposition-layout-default figure.exposition-teaser  {
   flex-direction: row;
 
-  figcaption {
+  .exposition-teaser--content {
     margin-left: 2em;
+  }
+
+  figcaption {
     max-width: 320px;
     display: flex;
     flex-direction: column;

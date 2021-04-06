@@ -23,6 +23,14 @@ figure.exposition-teaser {
   flex-direction: column; }
   figure.exposition-teaser img {
     max-width: 100%; }
+  figure.exposition-teaser ul {
+    margin: 0;
+    padding: 0; }
+    figure.exposition-teaser ul li {
+      list-style: none;
+      padding: 0;
+      text-transform: uppercase;
+      font-size: 0.7222em; }
   figure.exposition-teaser figcaption {
     margin-top: 1em; }
     figure.exposition-teaser figcaption cite {
@@ -34,8 +42,9 @@ figure.exposition-teaser {
 
 .exposition-layout-default figure.exposition-teaser {
   flex-direction: row; }
+  .exposition-layout-default figure.exposition-teaser .exposition-teaser--content {
+    margin-left: 2em; }
   .exposition-layout-default figure.exposition-teaser figcaption {
-    margin-left: 2em;
     max-width: 320px;
     display: flex;
     flex-direction: column;
