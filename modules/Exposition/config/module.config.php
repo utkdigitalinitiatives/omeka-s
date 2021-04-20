@@ -23,6 +23,7 @@ return [
             'heading' => '',
             'body' => '',
             'manifest' => '',
+            'region' => 'full',
             'layout' => '',
             'orientation' => ''
         ],

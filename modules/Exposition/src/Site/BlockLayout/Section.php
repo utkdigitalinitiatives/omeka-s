@@ -50,6 +50,7 @@ class Section extends AbstractBlockLayout
             'section' => array(
                 'heading' => $block->dataValue('heading'),
                 'body' => $block->dataValue('body'),
+                'region' => $block->dataValue('region'),
                 'manifest' => $block->dataValue('manifest'),
                 'layout' => $block->dataValue('layout'),
                 'orientation' => $block->dataValue('orientation'),

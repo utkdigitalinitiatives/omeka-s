@@ -40,7 +40,18 @@ class Section extends Fieldset
                     'info' => 'URI for 3.0 manifest',
                 ],
                 'attributes' => [
-                    'id' => 'exposition-section-iiif',
+                    'id' => 'exposition-section-manifest',
+                ],
+            ])
+            ->add([
+                'name' => 'o:block[__blockIndex__][o:data][region]',
+                'type' => Element\Text::class,
+                'options' => [
+                    'label' => 'Region',
+                    'info' => 'Optional Region to crop the preview image to. This does not crop in the viewer.',
+                ],
+                'attributes' => [
+                    'id' => 'exposition-section-region',
                 ],
             ])
             ->add([

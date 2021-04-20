@@ -9,8 +9,9 @@ if ($json->{'@context'} === 'https://iiif.io/api/presentation/3/context.json') :
 
     $label = $json->label->en[0];
     $summary = $json->summary->en[0];
-    $canvas = $json->items[0]->items[0]->items[0]->body[0]->id;
-    $canvas = $json->items[0]->items[0]->items[0]->body[0]->id;
+    $image = $json->items[0]->items[0]->items[0]->body[0]->service->{'@id'}
+    ;
+    $canvas = $image . '/' . $section['region'] . '/!1000,1000/0/default.jpg';
 
 ?>
 
