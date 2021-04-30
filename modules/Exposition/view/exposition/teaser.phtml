@@ -5,7 +5,7 @@
 $response = file_get_contents($section['manifest']);
 $json = json_decode($response);
 
-if ($json->{'@context'} === 'https://iiif.io/api/presentation/3/context.json') :
+if (in_array('https://iiif.io/api/presentation/3/context.json', $json->{'@context'})) :
 
     $label = $json->label->en[0];
     $summary = $json->summary->en[0];
