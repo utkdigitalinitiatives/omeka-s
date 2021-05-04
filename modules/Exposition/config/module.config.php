@@ -11,11 +11,13 @@ return [
     'block_layouts' => [
         'invokables' => [
             'section' => Site\BlockLayout\Section::class,
+            'narrative' => Site\BlockLayout\Narrative::class,
         ],
     ],
     'form_elements' => [
         'invokables' => [
             Form\Section::class => Form\Section::class,
+            Form\Narrative::class => Form\Narrative::class,
         ],
     ],
     'exposition' => [
@@ -26,6 +28,9 @@ return [
             'region' => 'full',
             'layout' => '',
             'orientation' => ''
+        ],
+        'narrative' => [
+            'manifest' => ''
         ],
     ],
 ];
