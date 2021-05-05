@@ -155,7 +155,7 @@ var Plot = /*#__PURE__*/function (_Component) {
         className: "exposition-plot"
       }, /*#__PURE__*/react.createElement("div", {
         className: "exposition-plot--strip"
-      }, /*#__PURE__*/react.createElement("figcaption", null, this.props.annotation.body.value)), /*#__PURE__*/react.createElement("div", {
+      }, /*#__PURE__*/react.createElement("figcaption", null, /*#__PURE__*/react.createElement("p", null, this.props.annotation.body.value))), /*#__PURE__*/react.createElement("div", {
         className: "exposition-plot--canvas"
       }, /*#__PURE__*/react.createElement(lib.default, null, /*#__PURE__*/react.createElement("img", {
         alt: this.props.label,
