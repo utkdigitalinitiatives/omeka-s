@@ -77,8 +77,6 @@ var Character = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       var full = this.props.image + '/full/!750,750/0/default.jpg';
-      var preview = this.props.image + '/full/!50,50/0/default.jpg';
-      console.log(this.props.requiredStatement);
       return /*#__PURE__*/react.createElement("figure", {
         className: "exposition-plot"
       }, /*#__PURE__*/react.createElement("div", {
@@ -88,11 +86,7 @@ var Character = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react.createElement(lib.default, null, /*#__PURE__*/react.createElement("img", {
         alt: this.props.label,
         src: full
-      })), /*#__PURE__*/react.createElement("span", {
-        style: {
-          backgroundImage: "url(".concat(preview, ")")
-        }
-      })));
+      }))));
     }
   }]);
 
@@ -157,7 +151,6 @@ var Plot = /*#__PURE__*/function (_Component) {
     value: function render() {
       var region = this.getRegion(this.props.annotation.target);
       var full = this.props.image + '/' + region + '/!750,750/0/default.jpg';
-      var preview = this.props.image + '/' + region + '/!50,50/0/default.jpg';
       return /*#__PURE__*/react.createElement("figure", {
         className: "exposition-plot"
       }, /*#__PURE__*/react.createElement("div", {
@@ -167,11 +160,7 @@ var Plot = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/react.createElement(lib.default, null, /*#__PURE__*/react.createElement("img", {
         alt: this.props.label,
         src: full
-      })), /*#__PURE__*/react.createElement("span", {
-        style: {
-          backgroundImage: "url(".concat(preview, ")")
-        }
-      })));
+      }))));
     }
   }]);
 
@@ -385,7 +374,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background-color: white;\n}\n\n.exposition-plot {\n  width: 100%;\n  display: flex;\n  padding: 0;\n  margin: 0 0 3em;\n  color: #333;\n  overflow: hidden;\n}\n.exposition-plot:nth-child(odd) {\n  flex-direction: row-reverse;\n}\n.exposition-plot--strip {\n  width: 30%;\n  background-color: transparent;\n  height: 100%;\n  z-index: 2;\n}\n.exposition-plot--strip figcaption {\n  padding: 3em;\n  font-family: system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Liberation Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\";\n}\n.exposition-plot--strip figcaption strong {\n  font-size: 1.25em;\n}\n.exposition-plot--strip figcaption em {\n  font-size: 0.75em;\n  line-height: 1.35em;\n  display: block;\n  color: #58595b;\n  width: 61.8%;\n}\n.exposition-plot--canvas {\n  width: 70%;\n  height: 100%;\n  position: relative;\n}\n.exposition-plot--canvas img {\n  width: calc(100% - 2em);\n  z-index: 1;\n  margin: 1em;\n  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);\n}\n.exposition-plot--canvas span {\n  opacity: 0;\n  display: block;\n  position: absolute;\n  width: 120%;\n  height: 120%;\n  left: -10%;\n  top: -10%;\n  background-size: cover;\n  filter: blur(50px) brightness(0.38);\n  z-index: 0;\n}", "",{"version":3,"sources":["webpack://./src/scss/style.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,UAAA;EACA,eAAA;EACA,WAAA;EACA,gBAAA;AACF;AACE;EACE,2BAAA;AACJ;AAEE;EACE,UAAA;EACA,6BAAA;EACA,YAAA;EACA,UAAA;AAAJ;AAEI;EACE,YAAA;EACA,4MAAA;AAAN;AAEM;EACE,iBAAA;AAAR;AAGM;EACE,iBAAA;EACA,mBAAA;EACA,cAAA;EACA,cAAA;EACA,YAAA;AADR;AAME;EACE,UAAA;EACA,YAAA;EACA,kBAAA;AAJJ;AAMI;EACE,uBAAA;EACA,UAAA;EACA,WAAA;EACA,2CAAA;AAJN;AAOI;EACE,UAAA;EACA,cAAA;EACA,kBAAA;EACA,WAAA;EACA,YAAA;EACA,UAAA;EACA,SAAA;EACA,sBAAA;EACA,mCAAA;EACA,UAAA;AALN","sourcesContent":["body {\n  background-color: white;\n}\n\n.exposition-plot {\n  width: 100%;\n  display: flex;\n  padding: 0;\n  margin: 0 0 3em;\n  color: #333;\n  overflow: hidden;\n\n  &:nth-child(odd) {\n    flex-direction: row-reverse;\n  }\n\n  &--strip {\n    width: 30%;\n    background-color: transparent;\n    height: 100%;\n    z-index: 2;\n\n    figcaption {\n      padding: 3em;\n      font-family: system-ui,-apple-system,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,\"Noto Sans\",\"Liberation Sans\",sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\",\"Noto Color Emoji\";\n\n      strong {\n        font-size: 1.25em;\n      }\n\n      em {\n        font-size: 0.75em;\n        line-height: 1.35em;\n        display: block;\n        color: #58595b;\n        width: 61.8%;\n      }\n    }\n  }\n\n  &--canvas {\n    width: 70%;\n    height: 100%;\n    position: relative;\n\n    img {\n      width: calc(100% - 2em);\n      z-index: 1;\n      margin: 1em;\n      box-shadow: 8px 8px 15px rgba(0,0,0,0.2);\n    }\n\n    span {\n      opacity: 0;\n      display: block;\n      position: absolute;\n      width: 120%;\n      height: 120%;\n      left: -10%;\n      top: -10%;\n      background-size: cover;\n      filter: blur(50px) brightness(0.38);\n      z-index: 0;\n    }\n  }\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background-color: white;\n}\n\n.exposition-plot {\n  width: 100%;\n  display: flex;\n  padding: 0;\n  margin: 0 0 3em;\n  color: #333;\n  overflow: hidden;\n}\n.exposition-plot:nth-child(odd) {\n  flex-direction: row-reverse;\n}\n.exposition-plot--strip {\n  width: 30%;\n  background-color: transparent;\n  height: 100%;\n  z-index: 2;\n}\n.exposition-plot--strip figcaption {\n  padding: 3em;\n}\n.exposition-plot--strip figcaption strong {\n  font-size: 1.2777rem;\n  line-height: 1.35em;\n}\n.exposition-plot--strip figcaption p {\n  font-size: 0.8333rem;\n  line-height: 1.55em;\n}\n.exposition-plot--strip figcaption em {\n  font-size: 0.7222rem;\n  line-height: 1.35em;\n  display: block;\n  color: #58595b;\n  width: 61.8%;\n}\n.exposition-plot--canvas {\n  width: 70%;\n  height: 100%;\n  position: relative;\n}\n.exposition-plot--canvas img {\n  width: calc(100% - 2em);\n  z-index: 1;\n  margin: 1em;\n  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);\n}\n.exposition-plot--canvas span {\n  overflow: hidden;\n}", "",{"version":3,"sources":["webpack://./src/scss/style.scss"],"names":[],"mappings":"AAAA;EACE,uBAAA;AACF;;AAEA;EACE,WAAA;EACA,aAAA;EACA,UAAA;EACA,eAAA;EACA,WAAA;EACA,gBAAA;AACF;AACE;EACE,2BAAA;AACJ;AAEE;EACE,UAAA;EACA,6BAAA;EACA,YAAA;EACA,UAAA;AAAJ;AAEI;EACE,YAAA;AAAN;AAEM;EACE,oBAAA;EACA,mBAAA;AAAR;AAGM;EACE,oBAAA;EACA,mBAAA;AADR;AAIM;EACE,oBAAA;EACA,mBAAA;EACA,cAAA;EACA,cAAA;EACA,YAAA;AAFR;AAOE;EACE,UAAA;EACA,YAAA;EACA,kBAAA;AALJ;AAOI;EACE,uBAAA;EACA,UAAA;EACA,WAAA;EACA,2CAAA;AALN;AAQI;EACE,gBAAA;AANN","sourcesContent":["body {\n  background-color: white;\n}\n\n.exposition-plot {\n  width: 100%;\n  display: flex;\n  padding: 0;\n  margin: 0 0 3em;\n  color: #333;\n  overflow: hidden;\n\n  &:nth-child(odd) {\n    flex-direction: row-reverse;\n  }\n\n  &--strip {\n    width: 30%;\n    background-color: transparent;\n    height: 100%;\n    z-index: 2;\n\n    figcaption {\n      padding: 3em;\n\n      strong {\n        font-size: 1.2777rem;\n        line-height: 1.35em;\n      }\n\n      p {\n        font-size: 0.8333rem;\n        line-height: 1.55em;\n      }\n\n      em {\n        font-size: 0.7222rem;\n        line-height: 1.35em;\n        display: block;\n        color: #58595b;\n        width: 61.8%;\n      }\n    }\n  }\n\n  &--canvas {\n    width: 70%;\n    height: 100%;\n    position: relative;\n\n    img {\n      width: calc(100% - 2em);\n      z-index: 1;\n      margin: 1em;\n      box-shadow: 8px 8px 15px rgba(0,0,0,0.2);\n    }\n\n    span {\n      overflow: hidden;\n    }\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
