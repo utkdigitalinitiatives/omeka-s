@@ -4,9 +4,16 @@
  * @var \Omeka\Api\Representation\SiteBlockAttachmentRepresentation[] $attachments
  */
 
+if ($mode === '') {
+    $mode = 'manifest';
+}
+
 ?>
 
-<div id="simple-mirador"
+<div id="simple-mirador-<?php echo $block_id; ?>"
+     class="simple-mirador"
+     data-mode="<?php echo $mode; ?>"
+     data-config="<?php echo htmlspecialchars(json_encode($config)); ?>"
      data-manifest="<?php echo $manifest; ?>">
 </div>
 

@@ -20,6 +20,32 @@ class IIIF extends Fieldset
                 'attributes' => [
                     'id' => 'iiif-manifest',
                 ],
+            ])
+            ->add([
+                'name' => 'o:block[__blockIndex__][o:data][config]',
+                'type' => Element\Textarea::class,
+                'options' => [
+                    'label' => 'Mirador 3 Config',
+                    'info' => 'URI for 3.0 manifest', // @translate
+                ],
+                'attributes' => [
+                    'id' => 'iiif-mirador-config',
+                ],
+            ])
+            ->add([
+                'name' => 'o:block[__blockIndex__][o:data][mode]',
+                'type' => Element\Select::class,
+                'options' => [
+                    'label' => 'Mode',
+                    'value_options' => array(
+                        'manifest' => 'Single Manifest',
+                        'config' => 'Custom Mirador Config'
+                    ),
+                    'empty_option' => 'Default',
+                ],
+                'attributes' => [
+                    'id' => 'iiif-mirador-mode'
+                ],
             ]);
     }
 }

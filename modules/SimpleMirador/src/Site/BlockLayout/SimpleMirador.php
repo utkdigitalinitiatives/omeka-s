@@ -44,7 +44,10 @@ class SimpleMirador extends AbstractBlockLayout
     public function render(PhpRenderer $view, SitePageBlockRepresentation $block)
     {
         return $view->partial('common/block-layout/simple-mirador', [
+            'block_id' => $block->id(),
             'manifest' => $block->dataValue('manifest'),
+            'config' => $block->dataValue('config'),
+            'mode' => $block->dataValue('mode'),
         ]);
     }
 }
