@@ -12,6 +12,8 @@ body {
       font-size: $type-7;
       font-weight: 400;
       color: $exhibitHeading;
+      text-transform: none;
+      text-shadow: 0 5px 8px rgba($white, 1);
     }
 
     span.exhibit-summary {
@@ -22,14 +24,43 @@ body {
 }
 
 main {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: $serif;
-    font-weight: 400;
-    color: $buckskin;
+  background: rgb(255,255,255);
+  background: linear-gradient(180deg, rgba(240,237,227,1) 0, rgba(255,255,255,1) 250px);
+
+  article .exposition-content--body {
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+      font-family: $serif;
+      font-weight: 400;
+      color: $buckskin;
+      display: inline-flex;
+      position: relative;
+      flex-direction: column;
+      flex-grow: 0;
+      width: auto;
+
+      &::after {
+        content: '';
+        height: 2px;
+        background-color: $limestone;
+        margin-top: 0.25em;
+        width: calc(100% + 1em);
+      }
+    }
+
+    p {
+      font-size: $type-2 !important;
+    }
+
+    ul,
+    ol {
+      > li {
+        font-size: $type-2 !important;
+      }
+    }
   }
 }

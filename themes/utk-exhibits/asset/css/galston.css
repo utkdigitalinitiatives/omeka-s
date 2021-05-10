@@ -40,20 +40,46 @@ body {
     font-family: Georgia, Times, "Times New Roman", serif;
     font-size: 2.6111rem;
     font-weight: 400;
-    color: #705550; }
+    color: #705550;
+    text-transform: none;
+    text-shadow: 0 5px 8px white; }
   .exhibit .exhibit-title span.exhibit-summary {
     color: #333;
     font-size: 1rem; }
 
-main h1,
-main h2,
-main h3,
-main h4,
-main h5,
-main h6 {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  font-weight: 400;
-  color: #705550; }
+main {
+  background: white;
+  background: linear-gradient(180deg, #f0ede3 0, white 250px); }
+  main article .exposition-content--body > h1,
+  main article .exposition-content--body > h2,
+  main article .exposition-content--body > h3,
+  main article .exposition-content--body > h4,
+  main article .exposition-content--body > h5,
+  main article .exposition-content--body > h6 {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    font-weight: 400;
+    color: #705550;
+    display: inline-flex;
+    position: relative;
+    flex-direction: column;
+    flex-grow: 0;
+    width: auto; }
+    main article .exposition-content--body > h1::after,
+    main article .exposition-content--body > h2::after,
+    main article .exposition-content--body > h3::after,
+    main article .exposition-content--body > h4::after,
+    main article .exposition-content--body > h5::after,
+    main article .exposition-content--body > h6::after {
+      content: '';
+      height: 2px;
+      background-color: #f0ede3;
+      margin-top: 0.25em;
+      width: calc(100% + 1em); }
+  main article .exposition-content--body p {
+    font-size: 0.8333rem !important; }
+  main article .exposition-content--body ul > li,
+  main article .exposition-content--body ol > li {
+    font-size: 0.8333rem !important; }
 
 .exhibit-navigation ul li {
   font-size: 0.8333rem; }

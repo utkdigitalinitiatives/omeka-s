@@ -48,9 +48,9 @@ endif;
 </head>
 <?php echo $this->htmlElement('body'); ?>
     <div id="utk-lib-header" data-page-title="Digital Exhibits - <?php echo $escape($siteTitle); ?> | Libraries at University of Tennessee, Knoxville"></div>
-    <?php echo $userBar; ?>
     <div class="exhibit" <?php echo $backgroundStyle; ?>>
         <?php echo $this->partial('partials/masthead.phtml'); ?>
+        <?php echo $userBar; ?>
         <main id="content" role="main" class="container">
             <?php echo $this->partial('partials/title.phtml'); ?>
             <?php echo $this->partial('partials/navigation.phtml'); ?>
