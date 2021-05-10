@@ -7,10 +7,9 @@
 if ($mode === '') {
     $mode = 'manifest';
 }
-
 ?>
 
-<div id="simple-mirador-<?php echo $block_id; ?>"
+<div id="simple-mirador-<?php echo $blockId; ?>"
      class="simple-mirador"
      data-mode="<?php echo $mode; ?>"
      data-config="<?php echo htmlspecialchars(json_encode($config)); ?>"
@@ -22,7 +21,7 @@ if ($mode === '') {
 </script>
 
 <style>
-    #mirador {
+    .simple-mirador {
         height: calc(600px);
         width: calc(100%);
         position: relative;

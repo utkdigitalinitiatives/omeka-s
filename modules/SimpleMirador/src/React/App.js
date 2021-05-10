@@ -1,27 +1,45 @@
 import React, {Component} from 'react';
 import Mirador from './components/Mirador';
-import Config from "./components/Config";
 
 class App extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
-            manifest: Config.Manifest,
-            config: Config.Config,
-            mode: Config.Mode,
+            manifest: null,
+            config: null,
+            mode: null,
         };
+    }
+
+    componentDidMount() {
+        const container = document.getElementById(this.props.blockId);
+        this.setState({
+            manifest: container.getAttribute('data-manifest'),
+            config: container.getAttribute('data-config'),
+            mode: container.getAttribute('data-mode'),
+        })
+    }
+
+    parseWindows (instance) {
+        return  Object.keys(instance).map(function(key, index) {
+            delete instance[key].companionWindowIds
+            return instance[key]
+        });
     }
 
     render() {
         const {mode, manifest, config} = this.state;
-
-        console.log(this.state)
-
         if (mode === 'config') {
+            let workspace = JSON.parse(JSON.parse(config))
             return (
                 <Mirador
-                    config={config}
+                    config={{
+                        id: this.props.blockId,
+                        windows: this.parseWindows(workspace.windows),
+                        workspaceControlPanel: {
+                            enabled: false,
+                        },
+                    }}
                     plugins={[]}
                 />
             );
@@ -29,15 +47,12 @@ class App extends Component {
             return (
                 <Mirador
                     config={{
-                        id: 'mirador',
+                        id: this.props.blockId,
                         window: {
                             allowFullscreen: false,
-                            sideBarPanel: 'info',
-                            hideWindowTitle: false,
                             sideBarOpen: true,
                             highlightAllAnnotations: true,
                             forceDrawAnnotations: true,
-                            defaultSidebarPanelWidth: 300,
                         },
                         windows: [
                             {

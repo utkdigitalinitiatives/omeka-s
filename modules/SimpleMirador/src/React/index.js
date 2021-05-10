@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-if (document.getElementById('simple-mirador')) {
-    ReactDOM.render(<App />, document.getElementById('simple-mirador'));
-}
+Array.prototype.forEach.call(
+    document.getElementsByClassName('simple-mirador'),
+    function(el) {
+        ReactDOM.render(<App blockId={el.id} />, el);
+    }
+);

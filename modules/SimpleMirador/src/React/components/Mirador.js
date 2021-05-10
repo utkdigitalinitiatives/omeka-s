@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import mirador from 'mirador';
-import PropTypes from 'prop-types';
 
 class Mirador extends Component {
   constructor(props) {
@@ -10,16 +9,14 @@ class Mirador extends Component {
 
   componentDidMount() {
     const { config, plugins } = this.props;
-
     this.miradorInstance = mirador.viewer(config, plugins);
     this.miradorInstance.store.subscribe(() => {
       const state = this.miradorInstance.store.getState();
-      console.log(state.windows);
     });
     // Hacky example of waiting a specified time to add a window... Don't do this for real
     setTimeout(() => {
       this.miradorInstance.store.dispatch(
-        this.miradorInstance.actions.addWindow()
+          this.miradorInstance.actions.addWindow()
       );
     }, 10000);
   }
@@ -29,10 +26,5 @@ class Mirador extends Component {
     return <div id={config.id} />;
   }
 }
-
-Mirador.propTypes = {
-  config: PropTypes.string.isRequired,
-  plugins: PropTypes.string.isRequired,
-};
 
 export default Mirador;
