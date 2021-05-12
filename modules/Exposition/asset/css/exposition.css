@@ -1,7 +1,7 @@
 section.exposition {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2em; }
+  margin-bottom: 4em; }
   section.exposition:last-child {
     margin-bottom: 0; }
   section.exposition .exposition-content {
@@ -16,36 +16,42 @@ section.exposition {
     section.exposition.exposition-layout-column .exposition-content > div {
       width: 50%; }
 
-figure.exposition-teaser {
-  margin: 2em;
-  padding: 2em;
+.exposition figure.exposition-teaser {
   display: flex;
-  flex-direction: column; }
-  figure.exposition-teaser img {
+  flex-direction: column;
+  margin: 2em 0; }
+  .exposition figure.exposition-teaser img {
     max-width: 100%; }
-  figure.exposition-teaser ul {
+  .exposition figure.exposition-teaser ul {
     margin: 0;
     padding: 0; }
-    figure.exposition-teaser ul li {
+    .exposition figure.exposition-teaser ul li {
       list-style: none;
       padding: 0;
       text-transform: uppercase;
       font-size: 0.7222em; }
-  figure.exposition-teaser figcaption {
+  .exposition figure.exposition-teaser figcaption {
     margin-top: 1em; }
-    figure.exposition-teaser figcaption cite {
+    .exposition figure.exposition-teaser figcaption cite {
       font-weight: 700; }
-    figure.exposition-teaser figcaption p {
+    .exposition figure.exposition-teaser figcaption p {
       margin-top: 0.5em;
       font-size: 0.8333em;
       line-height: 1.35rem; }
 
-.exposition-layout-default figure.exposition-teaser {
-  flex-direction: row; }
-  .exposition-layout-default figure.exposition-teaser .exposition-teaser--content {
+.exposition.exposition-layout-default figure.exposition-teaser {
+  flex-direction: row;
+  margin: 2em 0 !important; }
+  .exposition.exposition-layout-default figure.exposition-teaser .exposition-teaser--content {
     margin-left: 2em; }
-  .exposition-layout-default figure.exposition-teaser figcaption {
+  .exposition.exposition-layout-default figure.exposition-teaser figcaption {
     max-width: 320px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end; }
+
+.exposition.exposition-orientation-default figure.exposition-teaser {
+  margin-left: 4em; }
+
+.exposition.exposition-orientation-reverse figure.exposition-teaser {
+  margin-right: 4em; }
